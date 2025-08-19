@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References</title>
+
+    <style>
+    .main{ width: 1140px; height: 1470px; background-image: url(/ImagesAndVideos/bg.jpg);}
+
+
+    /* Header with contacts and copyright content is below */
+    .header{position: relative;width: 1140px;height: 70px;}
+    .header-logo         {box-sizing: border-box;width: 252px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; margin: auto;}
+    .header-logo:hover{transition: 0.5s;transform: scaleX(1.07) scaleY(1.35); box-shadow: 2px 2px 25px 2px aqua; position: relative;}
+    .header-section      {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+    .header-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+    .header-current-section{box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: aqua; color: black; font-size: 22px; font-weight: bolder; text-align: center;padding-top: 20px;animation-name: result-animation;animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;}
+    .header-current-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px black;}
+    @keyframes result-animation 
+        { 0%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;box-shadow: 0px 0px 25px 4px rgb(0, 229, 255);}
+           25%{border-image: linear-gradient(90deg, #6f00ff 0%, #00fff7 20%, #000000 40%, #ff00e1 60%, #000000 80%, #00fff7 100%) 1;box-shadow: 0px 0px 25px 4px rgb(204, 255, 0);} 
+           50%{border-image: linear-gradient(90deg, #00ff00 0%, #000 20%, #00f 40%, #000 60%, #0ff 80%, #000 100%) 1;box-shadow: 0px 0px 25px 4px rgb(255, 106, 0);}
+           75%{border-image: linear-gradient(90deg, #0ff, #0ff 15%, #00f 30%, #0ff 45%, #f0f 60%, #0ff 75%, #0ff 100%) 1;box-shadow: 0px 0px 25px 4px WHITE;}
+           100%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;}
+        }
+    .title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px rgb(219, 150, 203);}
+    .title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+    /* Header content ends here */
+
+
+    .container{width: 1120px;height: 1055px;border: 2px solid aqua;box-shadow: 0px 0px 15px 7px aqua;border-radius: 10px;margin-top: 15px;margin-left: 10px;background-color: black;}
+    .container-title{width: 450px;height: 40px;background-color: black;font-weight: bolder;text-align: center;margin-top: 10px;color: aqua;font-size: 20px;margin-left: 335px;border: 2px solid aqua;box-sizing: border-box;border-radius: 10px;padding-top: 6px;}
+    .container-title:hover{transform: scaleX(1.05) scaleY(1.05);transition: 0.5s;box-shadow: 0px 0px 15px 1px aqua;}
+    .container-body{width: 1060px;height: 400px;border: 2px solid aqua;background-color: black;column-count: 2;column-rule: 5px double darkcyan;column-gap: 20px;color: aqua;font-size: 12px;margin-top: 10px;margin-left: 30px;border-radius: 10px;}
+    .my-margin {margin-top: 10px;}
+    .my-margin:hover{border: 1px solid aqua;box-shadow: 0px 0px 10px 1px aqua;transform: scaleX(1.02) scaleY(1.05);transition: 0.5s;border-radius: 5px;}
+
+    .container-body2{width: 1060px;height: 450px;border: 2px solid aqua;background-color: black;color: aqua;font-size: 12px;margin-top: 10px;margin-left: 30px;border-radius: 10px;}
+    .card {
+        width: 200px;
+        height: 130px;
+      background: linear-gradient(145deg, #1f2e3d, #0d1b2a);
+      /* background: linear-gradient(45deg, #2c4a5e, #355e70, #626986); */
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-left: 20px;
+      transition: 0.3s ease;
+      float: left;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+        width: 160px;
+        height: 35px;
+      font-size: 20px;
+      color: #00ffff;
+      margin-top: 5px;
+      float: left;
+      text-align: center;
+    }
+
+    .card-content {
+      color:  #bbcdff;
+      text-align: justify;
+    }
+
+
+
+
+
+
+
+    .back-home{width: 150px;height: 27px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 13px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin-left: 507px;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .back-home:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+
+    /* Footer with contacts and copyright content is below */
+    .footer-title{width: 200px;height: 35px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 20px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin: auto;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .footer-title:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+    .footer-body{width: 123px;height: 70px;border: 0px solid aqua;float: left;margin-left: 0px;}
+    .footer-icon-info{margin-left:90px;margin-top: 25px; width: 16px;height:20px;border: 0px solid red;font-size: 3px;background-color: rgb(0, 0, 0);text-align: center;padding-top: 0px;border-radius: 2px;}
+    .footer-icon{width: 40px;height: 40px; margin-top: 10px;border: 0px solid aqua;margin-left: 40px;border-radius: 7px;float: left;}
+    .footer-icon:hover{transition: 0.3s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 0px 0px 10px 0px aqua;}
+    .footer-icon-name1{margin-top: 10px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left: 36px; border: 1px solid aqua;border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2{margin-top: -12px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left:36px;box-sizing: border-box;padding-top: 0px;  border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon-name1:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon:hover ~ .footer-icon-info{transition: 1.5s;animation-name: footer-icon;animation-iteration-count: 1;animation-fill-mode: both;animation-duration: 0.6s;animation-timing-function: ease-in;}
+    @keyframes footer-icon{
+        0%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,0deg);opacity: 0.1;}
+        25%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,90deg);opacity: 0.3;}
+        50%{transform: scaleX(2) scaleY(1) rotate3d(1,1,0,180deg);opacity: 0.6;}
+        75%{transform: scaleX(4) scaleY(3) rotate3d(1,1,0,270deg);opacity: 0.8;}
+        100%{transform: scaleX(7) scaleY(5) rotate3d(1,1,0,360deg);background-color: rgba(0, 0, 0,1);color: aqua;border: 1px solid aqua;margin-left: 150px;opacity: 1;}
+    }
+    .gmail{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/gmail.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .github{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/github2.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .linkedin{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/linkedin.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .whatsapp{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/whatsapp.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .copyright {background: linear-gradient(135deg, #0b0c10, #1f2833);text-align: center;padding: 20px 0;color: #66fcf1;box-shadow: 0 0 15px #1f2833;border-top: 2px solid #45a29e;border-bottom: 2px solid #45a29e;margin-top: 10px;border-radius: 12px;}
+    .copyright p {margin: 0;font-size: 24px;letter-spacing: 2px;}
+    /* Footer content ends here */
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="header-logo">
+                <img src="/ImagesAndVideos/Qamar Raza-horizontal.png" width="248" height="65" title="Qamar Logo" alt="Logo">
+            </div>
+            <div class="header-current-section"><a href="/references" style="text-decoration: none;color: black;">References</a></div>
+            <div class="header-section"><a href="/about-me" style="text-decoration: none;color: aqua;">About Me</a></div>
+            <div class="header-section"><a href="/about-project" style="text-decoration: none;color: aqua;">About Project</a></div>
+            <div class="header-section"><a href="/about-gender-detection" style="text-decoration: none;color: aqua;">About Gender Detection</a></div>
+        </div>
+        <hr>
+        <div class="title">
+            References
+        </div>
+        <hr>
+
+        <div class="container">
+            <hr>
+            <div class="container-title">Research Papers Used</div>
+            <div class="container-body">
+                <ol type="i">
+                    <li class="my-margin">G. Adene et al., “Detection and Classification of Human Gender into Binary (Male and Female) Using Convolutional Neural Network (CNN) Model,” Asian J. Res. Comput. Sci., vol. 17, no. 6, pp. 135–144, 2024.</li>
+                    <li class="my-margin">M. K. Benkaddour, “Gender Prediction and Age Estimation using CNN from Face Images,” in Proc. Int. Conf. Adv. Commun., Control & Computing Tech. (ICACC), 2021.</li>
+                    <li class="my-margin">J. Cheng, Y. Li, J. Wang, L. Yu, and S. Wang, “Exploiting Effective Facial Patches for Robust Gender Recognition,” Tsinghua Sci. Technol., vol. 24, no. 3, pp. 333–345, 2019.</li>
+                    <li class="my-margin">J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, "ImageNet: A large-scale hierarchical image database," 2009 IEEE Conference on Computer Vision and Pattern Recognition, Miami, FL, USA, 2009, pp. 248–255, doi: 10.1109/CVPR.2009.5206848.</li>
+                    <li class="my-margin">J. Ghrban and A. Abbadi, “Gender Classification from Face and Eyes Images Using Deep Learning Algorithm,” J. Comput. Sci., vol. 18, no. 3, pp. 138–146, 2022.</li>
+                    <li class="my-margin">P. Jabraelzade, A. Charmin, and M. Ebadpour, “Providing a Hybrid Method for Face Detection and Gender Recognition by a Transfer Learning and Fine-Tuning Approach in Deep CNNs and the YOLO Algorithm,” Int. J. Nonlinear Anal. Appl., vol. 14, no. 1, pp. 2373–2381, 2023.</li>
+                    <li class="my-margin">K. Jheeta and S. Sharma, “Real-Time Gender Classification using CNN,” in Proc. Int. Conf. Advances in Comput. and Communication Eng., 2021.</li>
+                    <li class="my-margin">S. Kim, Y. Park, and E. C. Lee, “Knowledge Distillation for Enhanced Age and Gender Prediction Accuracy,” Mathematics, vol. 12, no. 17, Art. 2647, 2024.</li>
+                    <li class="my-margin">M. Oulad-Kaddour et al., “Deep Learning-Based Gender Classification by Training With Fake Data,” IEEE Access, vol. 11, pp. 120764–120784, 2023.</li>
+                    <li class="my-margin">C. Rathgeb, A. Dantcheva, and C. Busch, “Impact and Detection of Facial Beautification in Face Recognition: An Overview,” IEEE Access, vol. 7, pp. 152667–152678, 2019.</li>
+                    <li class="my-margin">J. Rasheed, S. Waziry, S. Alsubai, and A. M. Abu-Mahfouz, “An Intelligent Gender Classification System in the Era of Pandemic Chaos with Veiled Faces,” Processes, vol. 10, no. 7, Art. 1427, 2022.</li>
+                    <li class="my-margin">V. Raman, K. ElKarazle, and P. Then, “Artificially Generated Facial Images for Gender Classification Using Deep Learning,” Comput. Syst. Sci. Eng., vol. 44, no. 2, pp. 1335–1350, 2023.</li>
+                    <li class="my-margin">M. Rouhsedaghat, Y. Wang, X. Ge, S. Hu, S. You, and C.-C. J. Kuo, “FaceHop: A Light-Weight Low-Resolution Face Gender Classification Method,” in Proc. ICPR Workshops (LNCS 12668), 2021, pp. 169–183.</li>
+                    <li class="my-margin">S. H. Sikkandar, S. Bharathi, I. Padmapriya, and R. Lekhaa, “Deep Learning Based Approach for Gender Classification,” in Proc. ICECA, 2018, pp. 1395–1399.</li>
+                    <li class="my-margin">K. Simonyan and A. Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition," arXiv preprint arXiv:1409.1556, 2014.</li>
+                    <li class="my-margin">A. Solanki, T. Vekariya, H. Ghevariya, and S. Parmar, “High-Precision Gender Classification with YOLO11: Benchmarking Against CNN and R-CNN in Real-Time Applications,” Grenze Int. J. Eng. Technol., vol. 11, no. 1, pp. 2510–2517, 2024.</li>
+                    <li class="my-margin">G. G. Tahyudin, M. D. Sulistiyo, M. Arzaki, and E. Rachmawati, “Classifying Gender Based on Face Images Using Vision Transformer,” Int. J. Inf. Vis., vol. 8, no. 1, p. 18, 2024.</li>
+                    <li class="my-margin">C. Zhang et al., “Gender Classification Based on Multiscale Facial Fusion Feature,” Math. Probl. Eng., vol. 2018, Art. ID 1924151, 2018.</li>
+                </ol>
+            </div>
+            <hr>
+
+            <hr style="margin-top: 40px;">
+            <div class="container-title" style="margin-top: 0px;">Tools Used</div>
+            <div class="container-body2" >
+                <div style="width: 1060px;height: 200px;margin-top: 20px;">
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/fastapi.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://fastapi.tiangolo.com/" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">FastAPI</a>
+                        </div>
+                        <div class="card-content">Used FastAPI to build the backend of my gender detection web application. It provides RESTful API endpoints for receiving image uploads, running the ML model inference, and returning the predicted gender to the user interface quickly and securely.</div> 
+                    </div>
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/python.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://www.python.org/" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">Python</a>
+                        </div>
+                        <div class="card-content">Utilized Python as the primary programming language throughout the project—for data preprocessing, model development, integrating libraries, and orchestrating the workflow between the web interface, backend API, and machine learning components.</div> 
+                    </div>
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/tensorflow.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://www.tensorflow.org/" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">Tensorflow</a>
+                        </div>
+                        <div class="card-content">Employed TensorFlow to design, train, and fine-tune the deep learning model responsible for gender prediction. The model processes input images and outputs the based-on-data prediction, forming the core logic behind the detection system.</div> 
+                    </div>
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/kaggle.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://www.kaggle.com/" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">Kaggle</a>
+                        </div>
+                        <div class="card-content">Used <a href="https://www.kaggle.com/datasets/trainingdatapro/gender-detection-and-classification-image-dataset" target="_blank"  style="color: rgb(196, 110, 196);text-decoration: none;" >"Gender Detection & Classification - Face Dataset"</a> from Kaggle for training, validating, and testing the gender detection model. Kaggle’s data collections provided the variety and volume needed to achieve accurate classification results.</div> 
+                    </div>
+                    
+                </div>
+
+                <div style="width: 1060px;height: 100px;margin-top: 20px;">
+                    <div class="card" style="margin-left: 150px;"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/html.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">HTML</a>
+                        </div>
+                        <div class="card-content">Developed the structure and content of the project’s web interface using HTML, allowing users to easily interact with features like uploading images, viewing results, and reading about the project tools.</div> 
+                    </div>
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/css.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">CSS</a>
+                        </div>
+                        <div class="card-content">Customized the appearance and layout of the website using CSS, ensuring a visually appealing, modern, and user-friendly experience while maintaining consistency with the project’s theme.</div> 
+                    </div>
+                    <div class="card"> 
+                        <div style="float: left;width: 30px;height: 30px;">
+                            <img src="/ImagesAndVideos/matplotlib.png" style="width: 30px;height: 30px;border-radius: 30px;border: 1px solid aqua;">
+                        </div>
+                        <div class="card-title"> 
+                            <a href="https://www.matplotlib.org/" target="_blank" style="text-decoration: none;color: #00ffff;margin-bottom: 45px;">Matplotlib</a>
+                        </div>
+                        <div class="card-content">Leveraged Matplotlib to visualize model performance metrics—such as confusion matrix, accuracy, and training loss curves, helping assess and present the results effectively within the project.</div> 
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+
+
+
+     
+
+
+
+
+        <div class="back-home">
+            <a href="/" style="text-decoration: none;color: aqua;" >Back To Home Page</a>
+        </div>
+
+        <div class="footer">
+            <div style="width: 500px;height: 100px;border: 1px solid white;margin-left: 330px;margin-top:10px;border-radius: 10px;background-color: black;padding-top: 10px;padding-bottom: 10px;">
+                <div class="footer-title">My Contacts</div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/gmail.png" width="40" height="40" style="border-radius: 7px;">
+                    </div>
+                    <div class="footer-icon-info"><p>Gmail:</p>  <p>raza8bb805</p> <p>@gmail.com</p></div>
+                    <div class="footer-icon-name1">Gmail</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://github.com/QamarRaza92" target="_blank">
+                        <img src="/ImagesAndVideos/github2.png" width="40" height="40" style="border-radius: 7px;" title="Link to my Github">
+                        </a>
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">Github</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://www.linkedin.com/in/qamar-raza-090693280?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BCHxh9v%2FMQVWYDhzVKNF2wg%3D%3D" target="_blank"> 
+                             <img src="/ImagesAndVideos/linkedin.png" width="40" height="40" style="border-radius: 7px;" title="Link to my LinkedIn">
+                        </a>
+                       
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">LinkedIn</div>
+                </div>
+                <div class="footer-body">  
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/whatsapp.png" width="40" height="40" style="border-radius: 7px;" > 
+                    </div>
+                    <div class="footer-icon-info"><p>Whatsapp:</p> <p>+91 8319417300</p></div>
+                    <div class="footer-icon-name1">Whatsapp</div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Gender Detection Through Facial Images - Model By QAMAR RAZA.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

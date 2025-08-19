@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Gender Detection</title>
+
+    <style>
+    .main{ width: 1140px; height: 2835px; background-image: url(/ImagesAndVideos/bg.jpg);}
+
+
+    /* Header with contacts and copyright content is below */
+    .header{position: relative;width: 1140px;height: 70px;}
+    .header-logo         {box-sizing: border-box;width: 252px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; margin: auto;}
+    .header-logo:hover{transition: 0.5s;transform: scaleX(1.07) scaleY(1.35); box-shadow: 2px 2px 25px 2px aqua; position: relative;}
+    .header-section      {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+    .header-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+    .header-current-section{box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: aqua; color: black; font-size: 22px; font-weight: bolder; text-align: center;padding-top: 20px;animation-name: result-animation;animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;}
+    .header-current-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px black;}
+    @keyframes result-animation 
+        { 0%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;box-shadow: 0px 0px 25px 4px rgb(0, 229, 255);}
+           25%{border-image: linear-gradient(90deg, #6f00ff 0%, #00fff7 20%, #000000 40%, #ff00e1 60%, #000000 80%, #00fff7 100%) 1;box-shadow: 0px 0px 25px 4px rgb(204, 255, 0);} 
+           50%{border-image: linear-gradient(90deg, #00ff00 0%, #000 20%, #00f 40%, #000 60%, #0ff 80%, #000 100%) 1;box-shadow: 0px 0px 25px 4px rgb(255, 106, 0);}
+           75%{border-image: linear-gradient(90deg, #0ff, #0ff 15%, #00f 30%, #0ff 45%, #f0f 60%, #0ff 75%, #0ff 100%) 1;box-shadow: 0px 0px 25px 4px WHITE;}
+           100%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;}
+        }
+    .title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px rgb(219, 150, 203);}
+    .title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+    /* Header content ends here */
+
+
+
+
+
+    .container{width: 1100px;height: 2428px;border: 2px solid aqua;box-shadow: 0px 0px 15px 7px aqua;background-color: black;margin-left: 20px;border-radius: 10px;}
+    .section1{width: 1100px;margin-top: 10px;height: 250px;border: 1px solid rgb(103, 208, 219);}
+    .name{font-weight: bolder;width: 450px;height: 70px;font-size: 30px;color: aqua;border: 1px solid rgb(130, 83, 147);margin-top: 10px;margin-left: 20px;box-sizing: border-box;padding-top: 20px;box-sizing: border-box;padding-left: 20px;border: 1px solid rgba(0, 255, 255, 0.2);border-radius: 10px;}
+    .name:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+    .brief-intro{font-weight: bolder;color: #bbcdff;font-size: 20px;width: 1000px;height: 300px;background: linear-gradient(145deg, #1f2e3d, #0d1b2a);border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);margin-left: 20px;margin-top: 10px;box-sizing: border-box;padding-top: 20px;padding-left: 20px;border-radius: 10px;}
+    .brief-intro:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+    .card {width: 180px;height: 120px;border-radius: 15px;
+        /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+        background: linear-gradient(135deg, #0f2e3d, #1a3b4d);
+        border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);border-radius: 5px;padding: 10px;margin-left: 20px;transition: 0.3s ease;float: left;margin-top: 40px;
+        /* color:  #bbcdff; */
+        color: aqua;
+        font-size: 20px;text-align: center;}
+    .card:hover {box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);transform: translateY(-5px);}
+
+
+    .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #00d2ff;
+        }
+        
+        .timeline li {
+            position: relative;
+            margin-bottom: 30px;
+            list-style: none;
+        }
+        
+        .timeline li:before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #3a7bd5;
+            border: 3px solid #00d2ff;
+        }
+
+
+
+
+
+
+
+
+
+    .back-home{width: 150px;height: 27px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 13px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin-left: 507px;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .back-home:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+
+    /* Footer with contacts and copyright content is below */
+    .footer-title{width: 200px;height: 35px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 20px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin: auto;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .footer-title:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+    .footer-body{width: 123px;height: 70px;border: 0px solid aqua;float: left;margin-left: 0px;}
+    .footer-icon-info{margin-left:90px;margin-top: 25px; width: 16px;height:20px;border: 0px solid red;font-size: 3px;background-color: rgb(0, 0, 0);text-align: center;padding-top: 0px;border-radius: 2px;}
+    .footer-icon{width: 40px;height: 40px; margin-top: 10px;border: 0px solid aqua;margin-left: 40px;border-radius: 7px;float: left;}
+    .footer-icon:hover{transition: 0.3s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 0px 0px 10px 0px aqua;}
+    .footer-icon-name1{margin-top: 10px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left: 36px; border: 1px solid aqua;border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2{margin-top: -12px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left:36px;box-sizing: border-box;padding-top: 0px;  border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon-name1:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon:hover ~ .footer-icon-info{transition: 1.5s;animation-name: footer-icon;animation-iteration-count: 1;animation-fill-mode: both;animation-duration: 0.6s;animation-timing-function: ease-in;}
+    @keyframes footer-icon{
+        0%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,0deg);opacity: 0.1;}
+        25%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,90deg);opacity: 0.3;}
+        50%{transform: scaleX(2) scaleY(1) rotate3d(1,1,0,180deg);opacity: 0.6;}
+        75%{transform: scaleX(4) scaleY(3) rotate3d(1,1,0,270deg);opacity: 0.8;}
+        100%{transform: scaleX(7) scaleY(5) rotate3d(1,1,0,360deg);background-color: rgba(0, 0, 0,1);color: aqua;border: 1px solid aqua;margin-left: 150px;opacity: 1;}
+    }
+    .gmail{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/gmail.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .github{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/github2.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .linkedin{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/linkedin.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .whatsapp{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/whatsapp.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .copyright {background: linear-gradient(135deg, #0b0c10, #1f2833);text-align: center;padding: 20px 0;color: #66fcf1;box-shadow: 0 0 15px #1f2833;border-top: 2px solid #45a29e;border-bottom: 2px solid #45a29e;margin-top: 10px;border-radius: 12px;margin-bottom: 5px;}
+    .copyright p {margin: 0;font-size: 24px;letter-spacing: 2px;}
+    /* Footer content ends here */
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="header-logo">
+                <img src="/ImagesAndVideos/Qamar Raza-horizontal.png" width="248" height="65" title="Qamar Logo" alt="Logo">
+            </div>
+            <div class="header-section"><a href="/references" style="text-decoration: none;color: aqua;">References</a></div>
+            <div class="header-section"><a href="/about-me" style="text-decoration: none;color: aqua;">About Me</a></div>
+            <div class="header-section"><a href="/about-project" style="text-decoration: none;color: aqua;">About Project</a></div>
+            <div class="header-current-section"><a href="/about-gender-detection" style="text-decoration: none;color: black;font-size: 20px;">About Gender Detection</a></div>
+        </div>
+        <hr>
+        <div class="title">
+            About Gender Detection
+        </div>
+        <hr>
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div  class="section1" style="height: 510px;">
+                <div class="name"> <span style="color: greenyellow ;">⚥ </span> What Is Gender Detection</div>
+                <div class="brief-intro" style="height: 200px;">
+                    <div style="width: 750px;line-height: 1.5;height: 160px;text-align: justify;float: left;">
+                        Gender Detection has become increasingly 
+                        important in recent years. in the field of defence, surveillance and 
+                        security. It is used in various domains and fields for different 
+                        purposes. To check whether a person is male or female becomes 
+                        important in some scenarios. Various technologies, researches, 
+                        studies and algorithms have already been used for this task with a 
+                        variety of models available.
+                    </div>
+                    <div style="float: left;width: 160px;height: 160px;border :1px solid aqua;border-radius: 10px;margin-left: 35px;background-image: url(/ImagesAndVideos/gender-detection-intro.jpg); background-size: cover;background-repeat: no-repeat;">
+                    </div>
+                </div>
+                <div style="width: 540px;height: 180px;margin-top: 5px;background-image: url(/ImagesAndVideos/cnn-detection.jpg);background-size: cover;background-repeat: no-repeat;border-radius: 5px;margin: auto;margin-top: 20px;border: 2px solid #bbcdff;"></div>
+            </div>
+
+
+            <div  class="section1" style="height: 410px;">
+                <div class="name">❓Why Is It Important</div>
+                <div class="brief-intro" >
+                    In the evolving landscape of intelligent systems, gender detection has emerged as a nuanced tool — not for labeling, but for understanding. It aids us in various domains across the world. <br>
+                    <div class="card" style="margin-left: 45px;">
+                        <div>Automated Identity Verification</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/automated-gender-detection.png);background-repeat: no-repeat;background-size: cover;margin-left: 40px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                    </div>
+                    <div class="card">
+                        <div>Security and Surveillance</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/security-and-surveillance.png);background-repeat: no-repeat;background-size: cover;margin-left: 40px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                    </div>
+                    <div class="card">
+                        <div>Human-Computer Interaction</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/human-computer-interaction.png);background-repeat: no-repeat;background-size: cover;margin-left: 40px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                    </div>
+                    <div class="card">
+                        <div>Marketing and Advertising</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/marketing.png);background-repeat: no-repeat;background-size: cover;margin-left: 40px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div  class="section1" style="height: 410px;">
+                <div class="name" style="width: 500px;">⏳ Evolution of Gender Detection</div>
+                <div class="brief-intro">
+                    <ul class="timeline">
+                <li><strong>1980s:</strong> Anthropologists manually measured skulls with calipers (65% accuracy)</li>
+                <li><strong>2001:</strong> Viola-Jones algorithm using Haar features (75% accuracy)</li>
+                <li><strong>2012:</strong> Deep learning revolution (AlexNet reached 88%)</li>
+                <li><strong>2015:</strong> VGG16/ResNet architectures (94%+ accuracy)</li>
+                <li><strong>2025:</strong> Computer Vision and Deep Learning techniques.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div  class="section1" style="height: 500px;">
+                <div class="name">🚧 Current Challenges</div>
+                <div class="brief-intro" style="height: 390px;">
+                    <div class="card" style="width: 200px;height: 250px;margin-left: 5px;">
+                        <div>Biased Datasets Available 🧬</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/biased-data.png);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Most training datasets over-represent white race, cisgender faces, leading to inaccurate predictions and exclusion of marginalized gender identities
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Cultural Differences Across Globe 🌍</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/cultural-differences.jpg);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Facial features, hairstyles, and makeup vary widely across cultures, making the gender detection models very prone to misclassification and stereo-typing.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Very Expensive Technology 💸</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/expensive-technology.webp);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            High costs of advanced AI tools and infrastructure limit accessibility, especially for the inclusive research and ethical model development.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Ethical Aspects And Regulations ⚖️</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/ethical-consideration.jpg);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            The Gender detection raises concerns around consent, fairness, and identity respect, demanding strong ethical frameworks and transparent governance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div  class="section1" style="height: 520px;">
+                <div class="name">📈 Where My Project Stands</div>
+                                <div class="brief-intro" style="height: 410px;">
+                    <div class="card" style="width: 200px;height: 250px;margin-left: 5px;">
+                        <div>Computationally Inexpensive 🧮</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/inexpensive.webp);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            The model architecture is very lightweight and also very highly optimized, requiring minimal computational power, perfect for rapid execution on low-resource systems..
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Used Previous Power-ful Technology🏗️</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/reuse-power-models.jpg);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Built upon proven deep learning pretrained model "VGG16", leveraging already existing advancements for reliable performance and reduced development time.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Cost Efficient Model Training 🛠️</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/efficient.jpg);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Optimized training pipeline minimizes compute cost, using efficient data handling and transfer learning to avoid expensive retraining from scratch.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div>Very Simple And Powerful 🎯</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/simple.jpg);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Despite its simplicity, the model delivers strong results—easy to deploy, scalable, and effective across diverse input conditions.
+                        </div>
+                    </div>
+
+                    <button style="border: 2px solid aqua;width: 120px;height: 40px;font-size: 15px;border-radius: 5px;background-color: black;margin-top: 20px;margin-left: 410px;"><a href="about-project" style="text-decoration: none;color: aqua;">Visit My Project Workflow</a></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="back-home">
+            <a href="/" style="text-decoration: none;color: aqua;">Back To Home Page</a>
+        </div>
+
+        <div class="footer">
+            <div style="width: 500px;height: 100px;border: 1px solid white;margin-left: 330px;margin-top:10px;border-radius: 10px;background-color: black;padding-top: 10px;padding-bottom: 10px;">
+                <div class="footer-title">My Contacts</div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/gmail.png" width="40" height="40" style="border-radius: 7px;">
+                    </div>
+                    <div class="footer-icon-info"><p>Gmail:</p>  <p>raza8bb805</p> <p>@gmail.com</p></div>
+                    <div class="footer-icon-name1">Gmail</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://github.com/QamarRaza92" target="_blank">
+                        <img src="/ImagesAndVideos/github2.png" width="40" height="40" style="border-radius: 7px;" title="Link to my Github">
+                        </a>
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">Github</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://www.linkedin.com/in/qamar-raza-090693280?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BCHxh9v%2FMQVWYDhzVKNF2wg%3D%3D" target="_blank"> 
+                             <img src="/ImagesAndVideos/linkedin.png" width="40" height="40" style="border-radius: 7px;" title="Link to my LinkedIn">
+                        </a>
+                       
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">LinkedIn</div>
+                </div>
+                <div class="footer-body">  
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/whatsapp.png" width="40" height="40" style="border-radius: 7px;" > 
+                    </div>
+                    <div class="footer-icon-info"><p>Whatsapp:</p> <p>+91 8319417300</p></div>
+                    <div class="footer-icon-name1">Whatsapp</div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Gender Detection Through Facial Images - Model By QAMAR RAZA.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

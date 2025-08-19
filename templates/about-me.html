@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <style>
+    .main{ width: 1140px; height: 4470px; background-image: url(/ImagesAndVideos/bg.jpg);}
+
+
+    /* Header with contacts and copyright content is below */
+    .header{position: relative;width: 1140px;height: 70px;}
+    .header-logo         {box-sizing: border-box;width: 252px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; margin: auto;}
+    .header-logo:hover{transition: 0.5s;transform: scaleX(1.07) scaleY(1.35); box-shadow: 2px 2px 25px 2px aqua; position: relative;}
+    .header-section      {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+    .header-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+    .header-current-section{box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: aqua; color: black; font-size: 22px; font-weight: bolder; text-align: center;padding-top: 20px;animation-name: result-animation;animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;}
+    .header-current-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px black;}
+    @keyframes result-animation 
+        { 0%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;box-shadow: 0px 0px 25px 4px rgb(0, 229, 255);}
+           25%{border-image: linear-gradient(90deg, #6f00ff 0%, #00fff7 20%, #000000 40%, #ff00e1 60%, #000000 80%, #00fff7 100%) 1;box-shadow: 0px 0px 25px 4px rgb(204, 255, 0);} 
+           50%{border-image: linear-gradient(90deg, #00ff00 0%, #000 20%, #00f 40%, #000 60%, #0ff 80%, #000 100%) 1;box-shadow: 0px 0px 25px 4px rgb(255, 106, 0);}
+           75%{border-image: linear-gradient(90deg, #0ff, #0ff 15%, #00f 30%, #0ff 45%, #f0f 60%, #0ff 75%, #0ff 100%) 1;box-shadow: 0px 0px 25px 4px WHITE;}
+           100%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;}
+        }
+    .title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px rgb(219, 150, 203);}
+    .title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+    /* Header content ends here */
+
+
+    .container{width: 1100px;height: 4060px;border: 2px solid aqua;box-shadow: 0px 0px 15px 7px aqua;background-color: black;margin-left: 20px;border-radius: 10px;}
+    .section1{width: 1100px;margin-top: 10px;height: 250px;border: 1px solid rgb(103, 208, 219);}
+    .my-image{float: left;width: 200px;height: 200px;border: 0px solid rgb(183, 224, 153);margin-left: 20px;margin-top: 20px;}
+    .outline-detail{width: 800px;height: 200px;border: 0px solid rgb(54, 135, 57);float: left;margin-left: 20px;margin-top: 20px;}
+    .name{font-weight: bolder;width: 450px;height: 70px;font-size: 30px;color: aqua;border: 1px solid rgb(130, 83, 147);margin-top: 10px;margin-left: 20px;box-sizing: border-box;padding-top: 20px;box-sizing: border-box;padding-left: 20px;border: 1px solid rgba(0, 255, 255, 0.2);border-radius: 10px;}
+    .name:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+    .brief-intro{font-weight: bolder;color: #bbcdff;font-size: 20px;width: 450px;height: 100px;background: linear-gradient(145deg, #1f2e3d, #0d1b2a);border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);margin-left: 20px;margin-top: 10px;box-sizing: border-box;padding-top: 20px;padding-left: 20px;border-radius: 10px;}
+    .brief-intro:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+
+    .card {width: 60px;height: 60px;
+        /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+        background: linear-gradient(135deg, #0f2e3d, #1a3b4d);
+        border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);border-radius: 5px;padding: 10px;margin-left: 20px;transition: 0.3s ease;float: left;margin-top: 15px;color:  #bbcdff;font-size: 15px;}
+    .card:hover {box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);transform: translateY(-5px);}
+    .card-title {width: 40px;height: 25px;font-size: 15px;color: #00ffff;margin-top: 5px;float: left;text-align: center;}
+    .card-content {color:  #bbcdff;}
+
+    .hobby{width: 150px;height: 100px;border-radius: 10px;background: linear-gradient(to right, #00ffff, #8a2be2);border: 1px solid #bbcdff;margin-top: 5px;text-align: center;font-size: 25px;color: whitesmoke;padding-top: 0px;
+        /* animation: move 10s linear 0s infinite ; */
+        position: relative;
+        float: left;margin-left: 35px;}
+
+    @keyframes move-hobby{
+        19%{transform: translateX(-150%);opacity: 0;}
+        20%{transform: translateX(590%);opacity: 0;}
+        100%{transform: translateX(0%);}
+    }
+    
+
+
+
+
+
+
+
+
+
+    .back-home{width: 150px;height: 27px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 13px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin-left: 507px;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .back-home:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+
+    /* Footer with contacts and copyright content is below */
+    .footer-title{width: 200px;height: 35px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 20px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin: auto;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .footer-title:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+    .footer-body{width: 123px;height: 70px;border: 0px solid aqua;float: left;margin-left: 0px;}
+    .footer-icon-info{margin-left:90px;margin-top: 25px; width: 16px;height:20px;border: 0px solid red;font-size: 3px;background-color: rgb(0, 0, 0);text-align: center;padding-top: 0px;border-radius: 2px;}
+    .footer-icon{width: 40px;height: 40px; margin-top: 10px;border: 0px solid aqua;margin-left: 40px;border-radius: 7px;float: left;}
+    .footer-icon:hover{transition: 0.3s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 0px 0px 10px 0px aqua;}
+    .footer-icon-name1{margin-top: 10px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left: 36px; border: 1px solid aqua;border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2{margin-top: -12px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left:36px;box-sizing: border-box;padding-top: 0px;  border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon-name1:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon:hover ~ .footer-icon-info{transition: 1.5s;animation-name: footer-icon;animation-iteration-count: 1;animation-fill-mode: both;animation-duration: 0.6s;animation-timing-function: ease-in;}
+    @keyframes footer-icon{
+        0%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,0deg);opacity: 0.1;}
+        25%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,90deg);opacity: 0.3;}
+        50%{transform: scaleX(2) scaleY(1) rotate3d(1,1,0,180deg);opacity: 0.6;}
+        75%{transform: scaleX(4) scaleY(3) rotate3d(1,1,0,270deg);opacity: 0.8;}
+        100%{transform: scaleX(7) scaleY(5) rotate3d(1,1,0,360deg);background-color: rgba(0, 0, 0,1);color: aqua;border: 1px solid aqua;margin-left: 150px;opacity: 1;}
+    }
+    .gmail{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/gmail.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .github{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/github2.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .linkedin{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/linkedin.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .whatsapp{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/whatsapp.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .copyright {background: linear-gradient(135deg, #0b0c10, #1f2833);text-align: center;padding: 20px 0;color: #66fcf1;box-shadow: 0 0 15px #1f2833;border-top: 2px solid #45a29e;border-bottom: 2px solid #45a29e;margin-top: 10px;border-radius: 12px;}
+    .copyright p {margin: 0;font-size: 24px;letter-spacing: 2px;}
+    /* Footer content ends here */
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="header-logo">
+                <img src="/ImagesAndVideos/Qamar Raza-horizontal.png" width="248" height="65" title="Qamar Logo" alt="Logo">
+            </div>
+            <div class="header-section"><a href="/references" style="text-decoration: none;color: aqua;">References</a></div>
+            <div class="header-current-section"><a href="/about-me" style="text-decoration: none;color: black;">About Me</a></div>
+            <div class="header-section"><a href="/about-project" style="text-decoration: none;color: aqua;">About Project</a></div>
+            <div class="header-section"><a href="/about-gender-detection" style="text-decoration: none;color: aqua;">About Gender Detection</a></div>
+        </div>
+        <hr>
+        <div class="title">
+            About Me
+        </div>
+        <hr>
+
+
+
+        <div class="container">
+            <div class="section1" >
+                <div class="my-image">
+                    <img src="/ImagesAndVideos/my-photo.png" style="width: 190px;height: 190x;border-radius: 90px;margin-top: 5px;margin-left: 5px;">
+                </div>
+                <div class="outline-detail" >
+                    <div class="name">Qamar Raza</div>
+                    <div class="brief-intro" style="line-height: 1.5;">Data Science Enthusiast | Driven By Curiosity | Code Minded</div>
+                </div>
+            </div>
+
+            <div class="section1" style="height: 210px;">
+                <div class="name">My Background</div>
+                <div class="brief-intro" style="width: 1000px;font-size: 15px;line-height: 1.5;">
+                    I’m an ambitious and driven aspiring Data Scientist with a strong tech foundation and a deep passion for decoding complex problems through data. Currently pursuing my B.Tech, I specialize in crafting intelligent solutions using machine learning, AI, and analytics. With a curious mind and a relentless drive to innovate, I thrive on turning raw data into impactful insights that matter.
+                </div>
+            </div>
+
+            <div class="section1" style="height: 340px;">
+                <div class="name" style="margin-top: 10px;">Education</div>
+                <div class="brief-intro" style="width: 1000px;height: 70px; font-size: 15px;padding-top: 5px;">
+                    <div class="school-logo" style="width: 30px;height: 30px;float: left;"><img src="/ImagesAndVideos/medicaps-logo.png" alt="Medicaps University" title="Medicaps Logo" style="width: 25px;height: 25px;border-radius:30px;"></div>
+                    <div class="school-name" style="width: 865px;margin-left: 5px;font-size: 20px;float: left;color: aqua;">Medicaps University</div>
+                    <div class="school-session" style="font-size: 15px;font-weight: bold;color: #bbcdff;float: left;width: 70px;">2022-26</div>
+                    <div class="marks" style="color: #bbcdff;font-size: 15px;width: 600px;margin-top: 35px;margin-left: 5px;">B.Tech. - CSE - Data Science | CGPA: 8.91 / 10</div>
+                </div>
+
+                <div class="brief-intro" style="width: 1000px;height: 70px; font-size: 15px;padding-top: 5px;">
+                    <div class="school-logo" style="width: 30px;height: 30px;float: left;"><img src="/ImagesAndVideos/rockwood-logo.png" alt="Rock Wood School" title="Rock Wood Logo" style="width: 25px;height: 25px;"></div>
+                    <div class="school-name" style="width: 865px;margin-left: 5px;font-size: 20px;float: left;color: aqua;">Rock Wood Higher Secondary School, Indore</div>
+                    <div class="school-session" style="font-size: 15px;font-weight: bold;color: #bbcdff;float: left;width: 70px;">2021-22</div>
+                    <div class="marks" style="color: #bbcdff;font-size: 15px;width: 600px;margin-top: 35px;margin-left: 5px;">12th | MPBSE | Percentage: 90.80 / 100
+                    </div>
+                </div>
+
+                <div class="brief-intro" style="width: 1000px;height: 70px; font-size: 15px;padding-top: 5px;">
+                    <div class="school-logo" style="width: 30px;height: 30px;float: left;"><img src="/ImagesAndVideos/rockwood-logo.png" alt="Rock Wood School" title="Rock Wood Logo" style="width: 25px;height: 25px;"></div>
+                    <div class="school-name" style="width: 865px;margin-left: 5px;font-size: 20px;float: left;color: aqua;">Rock Wood Higher Secondary School, Indore</div>
+                    <div class="school-session" style="font-size: 15px;font-weight: bold;color: #bbcdff;float: left;width: 70px;">2019-20</div>
+                    <div class="marks" style="color: #bbcdff;font-size: 15px;width: 600px;margin-top: 35px;margin-left: 5px;">10th | MPBSE | Percentage: 94.30 / 100
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section1" style="height: 730px;">
+                <div class="name">Skill Proficiency</div>
+                <div class="brief-intro" style="width: 1000px;height: 200px; font-size: 15px;padding-top: 5px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/programming.jpg" alt="Programming" title="Programming Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;font-size: 20px;margin-top: 10px; color: aqua;">Programming</div>
+                    <ul>
+                        <li style="margin-top: 10px;">Python (Core + Libraries: Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scipy)</li>
+                        <li style="margin-top: 10px;">C (Basics, Union, Structure, File Handling)</li>
+                        <li style="margin-top: 10px;">C++ (Classes, Inheritence, Encapsulation, Polymorphism, OOPs)</li>
+                        <li style="margin-top: 10px;">Core Java (Basics)</li>
+                        <li style="margin-top: 10px;">SQL (Indexing, Partitioning, Window Functions, Query Optimization)</li>
+                    </ul>
+                </div>
+                <div class="brief-intro" style="width: 1000px;height: 200px; font-size: 15px;padding-top: 5px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/ds.png" alt="Data Science" title="Data Science Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;font-size: 20px;margin-top: 10px; color: aqua;">Data Science</div>
+                    <ul>
+                        <li style="margin-top: 10px;">Machine Learning (Supervised, Unsupervised and Reinforcement Learning + Libraries: Scikit-Learn, Mlxtend, OpevCV)</li>
+                        <li style="margin-top: 10px;">Deep Learning (ANN, CNN, RNN, Transformers, LSTMs + Libraries: Tensorflow, Keras)</li>
+                        <li style="margin-top: 10px;">EDA (Exploratory Data Analysis) + Data Visualization</li>
+                        <li style="margin-top: 10px;">Development & Workflow Tools (VSCode, Jupyter Notebook, Colab)</li>
+                        <li style="margin-top: 10px;">Natural Language Processing [NLP]  (Libraries: Nltk, Spacy, textBlob, Regex)</li>
+                    </ul>
+                </div>
+                <div class="brief-intro" style="width: 1000px;height: 200px; font-size: 15px;padding-top: 5px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/web-development.png" alt="Web Development" title="Web Development Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;font-size: 20px;margin-top: 10px; color: aqua;">Web Development</div>
+                    <ul>
+                        <li style="margin-top: 10px;">Frontend (HTML, CSS, Javascript)</li>
+                        <li style="margin-top: 10px;">Backend Framework (FastAPI and Flask)</li>
+                        <li style="margin-top: 10px;">Deployment Tools (Render , Heroku)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section1" style="height: 2190px;">
+                <div class="name">Other Projects</div>
+                <div class="brief-intro" style="width: 1000px;height: 620px;padding-top: 5px;color: aqua;float: left;margin-top: 30px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/ipl.jpg" alt="Web Development" title="Web Development Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;margin-top: 10px; color: aqua;width: 240px;float: left;">IPL Winning Prediction</div>
+
+                    <div style="width: 560px;height: 30px;float: left;margin-top: 10px;"><img src="/My Logos/IPL-QR.png" alt="qr code for model" title="Scan to access model" style="width: 25px;height: 25px;transform: scaleX(1.5) scaleY(1.5);"></div>
+
+                    <div style="font-size: 15px;margin-top: 10px;padding-top: 3px;margin-left: 30px;">June - 2024</div>
+                    <div style="margin-top: 20px;color: aqua;font-size: 15px;">
+                        Project Link:  <a href="https://ipl-match-winning-predictor.onrender.com" style="text-decoration: none;" class="card-content">https://ipl-match-winning-predictor.onrender.com</a>
+                    </div>
+                    <div style="font-size: 15px;line-height: 1.5;margin-top: 10px;" class="card-content"><strong style="color: aqua;">
+                        Breif Description: </strong> This project predicts the winning probability of an IPL team during a live match using machine learning techniques. Key features like current run rate, required run rate balls left, wickets lost, and target score were used to train the model. Logistic Regression was selected primary algorithm, with OneHotEncoding applied to categorical variables such as teams and venues. The model real-time winning probabilities and was evaluated using accuracy metrics to ensure performance. This project showcases the power of data-driven decision-making in sports analytics.
+                    </div>
+                    <div style="font-size: 15px;" class="card-content">
+                        <div style="color: aqua;margin-top: 10px;">Key Skills & Tools:</div>
+                        <div style="width: 975px;height: 100px;">
+                            <div class="card" style="margin-left: 0px;">
+                                <div>
+                                    <img src="/ImagesAndVideos/python.png" alt="python logo" title="Python Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Python</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/streamlit.png" alt="streamlit logo" title="Streamlit Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 2px;margin-top: 5px;">Streamlit</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/logistic-reg.png" alt="logistic-regression logo" title="Logistic Regression Forest Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -2px;margin-top: 5px;">Logistic Regression</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/numpy.png" alt="numpy logo" title="NumPy Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">NumPy</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/pandas.png" alt="pandas logo" title="Pandas Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Pandas</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/matplotlib.png" alt="flask logo" title="Flask Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -3px;margin-top: 5px;">Matplotlib</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/html.png" alt="html logo" title="HTML Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">HTML</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/css.png" alt="css logo" title="CSS Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 15px;margin-top: 5px;">CSS</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/render.png" alt="render logo" title="Render Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Render</div>
+                            </div>
+                        </div>
+                        <div style="color: aqua;margin-top: 10px;font-size: 15px;">Snapshots:</div>
+                        <div style="width: 975px;height: 300px;">
+                            <img src="/ImagesAndVideos/ipl-snap1.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 0px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                            <img src="/ImagesAndVideos/ipl-snap2.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 85px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="brief-intro" style="width: 1000px;height: 640px;padding-top: 5px;color: aqua;float: left;margin-top: 30px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/laptop.png" alt="Web Development" title="Web Development Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;margin-top: 10px; color: aqua;width: 240px;float: left;">Laptop Price Prediction  </div>
+
+                    <div style="width: 560px;height: 30px;float: left;margin-top: 10px;"><img src="/My Logos/Laptop-QR.png" alt="qr code for model" title="Scan to access model" style="width: 25px;height: 25px;transform: scaleX(1.5) scaleY(1.5);"></div>
+
+
+                    <div style="font-size: 15px;margin-top: 10px;padding-top: 3px;margin-left: 30px;">July - 2024</div>
+                    <div style="margin-top: 20px;color: aqua;font-size: 15px;">
+                        Project Link:  <a href=" https://laptop-price-prediction-sqgd.onrender.com" style="text-decoration: none;" class="card-content"> https://laptop-price-prediction-sqgd.onrender.com</a>
+                    </div>
+                    <div style="font-size: 15px;line-height: 1.5;margin-top: 10px;" class="card-content"><strong style="color: aqua;">
+                        Breif Description: </strong> This project predicts the price of a laptop based on user-input features such as brand, processor type, RAM, storage, GPU, screen size, and operating system. A regression model was trained on structured data to estimate the laptop's price accurately. For deployment, I built a Flask-based backend and converted the model into a user-friendly web application. The app was deployed on Render, allowing users to interactively input specifications and receive real-time price predictions. This project demonstrates end-to-end ML application development—from model training to live deployment.
+                    </div>
+                    <div style="font-size: 15px;" class="card-content">
+                        <div style="color: aqua;margin-top: 10px;">Key Skills & Tools:</div>
+                        <div style="width: 975px;height: 100px;">
+                            <div class="card" style="margin-left: 0px;">
+                                <div>
+                                    <img src="/ImagesAndVideos/python.png" alt="python logo" title="Python Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Python</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/flask.jpg" alt="flask logo" title="Flask Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 13px;margin-top: 5px;">Flask</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/random-forest.jpg" alt="random-forest logo" title="Random Forest Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -2px;margin-top: 5px;">Random Forest</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/numpy.png" alt="numpy logo" title="NumPy Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">NumPy</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/pandas.png" alt="pandas logo" title="Pandas Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Pandas</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/matplotlib.png" alt="flask logo" title="Flask Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -3px;margin-top: 5px;">Matplotlib</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/html.png" alt="html logo" title="HTML Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">HTML</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/css.png" alt="css logo" title="CSS Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 15px;margin-top: 5px;">CSS</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/render.png" alt="render logo" title="Render Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Render</div>
+                            </div>
+                        </div>
+                        <div style="color: aqua;margin-top: 10px;font-size: 15px;">Snapshots:</div>
+                        <div style="width: 975px;height: 300px;">
+                            <img src="/ImagesAndVideos/laptop-snap1.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 0px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                            <img src="/ImagesAndVideos/laptop-snap2.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 85px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="brief-intro" style="width: 1000px;height: 740px;padding-top: 5px;color: aqua;float: left;margin-top: 30px;">
+                    <div style="width: 30px;height: 30px;float: left;margin-top: 10px;"><img src="/ImagesAndVideos/spam.jpg" alt="Web Development" title="Web Development Logo" style="width: 25px;height: 25px;border-radius: 20px;"></div>
+                    <div style="margin-left: 20px;margin-top: 10px; color: aqua;width: 240px;float: left;">Spam Message Detection</div>
+
+                    <div style="width: 560px;height: 30px;float: left;margin-top: 10px;"><img src="/My Logos/Spam-QR.png" alt="qr code for model" title="Scan to access model" style="width: 25px;height: 25px;transform: scaleX(1.5) scaleY(1.5);"></div>
+
+                    <div style="font-size: 15px;margin-top: 10px;padding-top: 3px;margin-left: 30px;">October - 2024</div>
+                    <div style="margin-top: 20px;color: aqua;font-size: 15px;">
+                        Project Link:  <a href="https://spam-message-detection-fzj4.onrender.com" style="text-decoration: none;" class="card-content">https://spam-message-detection-fzj4.onrender.com</a>
+                    </div>
+                    <div style="font-size: 15px;line-height: 1.5;margin-top: 10px;" class="card-content"><strong style="color: aqua;">
+                        Breif Description: </strong> This project aims to classify text messages as either spam or not spam using machine learning and natural language processing techniques. The dataset was preprocessed through text cleaning, tokenization, stopword removal, and vectorization using Bag of Words and TF-IDF. A machine learning classification model was trained to identify patterns in spam messages and make accurate predictions. The project was deployed as a web application using Flask for the backend and hosted on Render, allowing users to input any message and instantly receive a spam classification. It demonstrates the practical use of ML in automating message filtering systems.
+                    </div>
+                    <div style="font-size: 15px;" class="card-content">
+                        <div style="color: aqua;margin-top: 10px;">Key Skills & Tools:</div>
+                        <div style="width: 975px;height: 100px;">
+                            <div class="card" style="margin-left: 0px;">
+                                <div>
+                                    <img src="/ImagesAndVideos/python.png" alt="python logo" title="Python Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Python</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/flask.jpg" alt="streamlit logo" title="Streamlit Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 13px;margin-top: 5px;">Flask</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/nlp.png" alt="nlp logo" title="Natural Language Processing Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -2px;margin-top: 5px;font-size: 15px;margin-left: 15px;">NLP</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/numpy.png" alt="numpy logo" title="NumPy Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">NumPy</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/pandas.png" alt="pandas logo" title="Pandas Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Pandas</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/matplotlib.png" alt="flask logo" title="Flask Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: -3px;margin-top: 5px;">Matplotlib</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/html.png" alt="html logo" title="HTML Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">HTML</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/css.png" alt="css logo" title="CSS Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 15px;margin-top: 5px;">CSS</div>
+                            </div>
+                            <div class="card" >
+                                <div>
+                                    <img src="/ImagesAndVideos/render.png" alt="render logo" title="Render Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                </div>
+                                <div style="margin-left: 7px;margin-top: 5px;">Render</div>
+                            </div>
+                        </div>
+                        <div style="width: 975px;height: 100px;">
+                            <div class="card" style="margin-left: 55px;">
+                                    <div>
+                                        <img src="/ImagesAndVideos/nltk.png" alt="nltk logo" title="Natural Language Toolkit Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 10px;">NLTK</div>
+                                </div>
+                                <div class="card">
+                                    <div>
+                                        <img src="/ImagesAndVideos/tfidf.jpg" alt="tfidf logo" title="TF-IDF Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 7px;">Tf-Idf</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/bag-of-words.png" alt="bag-of-words logo" title="Bag-Of-Words Language Processing Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 10px;">Bag Of Words</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/word2vec.png" alt="word2vec logo" title="Word2Vec Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: -2px;">Word2Vec</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/tokenization.png" alt="tokenization logo" title="Tokenization Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: -10px;">Tokenization</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/textblob.png" alt="textblob logo" title="Textblob Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 2px;">Textblob</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/spacy.png" alt="spacy logo" title="Spacy Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 10px;">Spacy</div>
+                                </div>
+                                <div class="card" >
+                                    <div>
+                                        <img src="/ImagesAndVideos/regex.png" alt="regex logo" title="Regex Logo" style="width: 30px;height: 30px;margin-left: 14px;">
+                                    </div>
+                                    <div style="margin-top: 5px;font-size: 15px;margin-left: 10px;">Regex</div>
+                                </div>
+                        </div>
+
+
+
+                        <div style="width: 900px;height: 350px;border: 0px solid mediumspringgreen;">
+                            <div style="color: aqua;margin-top: 10px;font-size: 15px;">Snapshots:</div>
+                            <div style="width: 975px;height: 300px;">
+                                <img src="/ImagesAndVideos/spam-snap1.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 0px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                                <img src="/ImagesAndVideos/spam-snap2.png" alt="ipl-model-home-page" title="IPL Model HomePage" style="width: 400px;height: 250px;margin-top: 10px;margin-left: 85px;float: left;border-radius: 10px;border: 2px solid aqua;box-shadow: 0px 0px 10px 1px aqua;">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section1" style="height: 260px;">
+                <div class="name">Personal Interests & Hobbies</div>
+                <div class="brief-intro" style="width: 1000px;height: 150px; font-size: 20px;line-height: 1.5;overflow: hidden;position: absolute;">
+                    <div class="hobby" style="animation: move-hobby 10s linear 0s infinite backwards;">
+                        <div style="width: 150px;height: 67px;">
+                            <img src="/ImagesAndVideos/music.jpg" alt="music" title="Music" style="width: 60px;height: 60px;border-radius: 10px;border: 1px solid black;margin-top: 5px;"></div>
+                            <div>Music</div>
+                        </div>
+                    <div class="hobby" style="animation: move-hobby 10s linear 0s infinite backwards;">
+                        <div style="width: 150px;height: 67px;">
+                            <img src="/ImagesAndVideos/singing.png" alt="singing" title="Singing" style="width: 60px;height: 60px;border-radius: 10px;border: 1px solid black;margin-top: 5px;"></div>
+                            <div>Singing</div>
+                        </div>
+                    <div class="hobby" style="animation: move-hobby 10s linear 0s infinite backwards;">
+                        <div style="width: 150px;height: 67px;">
+                            <img src="/ImagesAndVideos/cricket.jpg" alt="cricket" title="Cricket" style="width: 60px;height: 60px;border-radius: 10px;border: 1px solid black;margin-top: 5px;"></div>
+                            <div>Cricket</div>
+                        </div>
+                    <div class="hobby" style="animation: move-hobby 10s linear 0s infinite backwards;">
+                        <div style="width: 150px;height: 67px;">
+                            <img src="/ImagesAndVideos/maths.jpg" alt="maths" title="Maths" style="width: 60px;height: 60px;border-radius: 10px;border: 1px solid black;margin-top: 5px;"></div>
+                            <div>Mathematics</div>
+                        </div>
+                    <div class="hobby" style="animation: move-hobby 10s linear 0s infinite backwards;">
+                        <div style="width: 150px;height: 67px;">
+                            <img src="/ImagesAndVideos/teaching.jpg" alt="teaching" title="Teaching" style="width: 60px;height: 60px;border-radius: 10px;border: 1px solid black;margin-top: 5px;"></div>
+                            <div style="margin-top: 0px;">Teaching</div>
+                        </div>
+                </div>
+            </div>
+
+
+
+            
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        <div class="back-home">
+            <a href="/" style="text-decoration: none;color: aqua;">Back To Home Page</a>
+        </div>
+
+        <div class="footer">
+            <div style="width: 500px;height: 100px;border: 1px solid white;margin-left: 330px;margin-top:10px;border-radius: 10px;background-color: black;padding-top: 10px;padding-bottom: 10px;">
+                <div class="footer-title">My Contacts</div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/gmail.png" width="40" height="40" style="border-radius: 7px;">
+                    </div>
+                    <div class="footer-icon-info"><p>Gmail:</p>  <p>raza8bb805</p> <p>@gmail.com</p></div>
+                    <div class="footer-icon-name1">Gmail</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://github.com/QamarRaza92" target="_blank">
+                        <img src="/ImagesAndVideos/github2.png" width="40" height="40" style="border-radius: 7px;" title="Link to my Github">
+                        </a>
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">Github</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://www.linkedin.com/in/qamar-raza-090693280?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BCHxh9v%2FMQVWYDhzVKNF2wg%3D%3D" target="_blank"> 
+                             <img src="/ImagesAndVideos/linkedin.png" width="40" height="40" style="border-radius: 7px;" title="Link to my LinkedIn">
+                        </a>
+                       
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">LinkedIn</div>
+                </div>
+                <div class="footer-body">  
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/whatsapp.png" width="40" height="40" style="border-radius: 7px;" > 
+                    </div>
+                    <div class="footer-icon-info"><p>Whatsapp:</p> <p>+91 8319417300</p></div>
+                    <div class="footer-icon-name1">Whatsapp</div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Gender Detection Through Facial Images - Model By QAMAR RAZA.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

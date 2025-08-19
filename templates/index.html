@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENDER DETECTION</title>
+    <style>
+        .main{ width: 1140px; height: 2255px; background-image: url(/ImagesAndVideos/bg.jpg);}
+
+        .footer-title{width: 200px;height: 35px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 20px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin: auto;text-align: center;box-sizing: border-box;padding-top: 4px;}
+        .footer-title:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+        .footer-body{width: 123px;height: 70px;border: 0px solid aqua;float: left;margin-left: 0px;}
+        .footer-icon-info{margin-left:90px;margin-top: 25px; width: 16px;height:20px;border: 0px solid red;font-size: 3px;background-color: rgb(0, 0, 0);text-align: center;padding-top: 0px;border-radius: 2px;}
+        .footer-icon{width: 40px;height: 40px; margin-top: 10px;border: 0px solid aqua;margin-left: 40px;border-radius: 7px;float: left;}
+        .footer-icon:hover{transition: 0.3s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 0px 0px 10px 0px aqua;}
+        .footer-icon-name1{margin-top: 10px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left: 36px; border: 1px solid aqua;border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+        .footer-icon-name2{margin-top: -12px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left:36px;box-sizing: border-box;padding-top: 0px;  border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+        .footer-icon-name2:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+        .footer-icon-name1:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+
+        .footer-icon:hover ~ .footer-icon-info{transition: 1.5s;animation-name: footer-icon;animation-iteration-count: 1;animation-fill-mode: both;animation-duration: 0.6s;animation-timing-function: ease-in;}
+
+        @keyframes footer-icon{
+            0%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,0deg);opacity: 0.1;}
+           25%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,90deg);opacity: 0.3;}
+           50%{transform: scaleX(2) scaleY(1) rotate3d(1,1,0,180deg);opacity: 0.6;}
+           75%{transform: scaleX(4) scaleY(3) rotate3d(1,1,0,270deg);opacity: 0.8;}
+           100%{transform: scaleX(7) scaleY(5) rotate3d(1,1,0,360deg);background-color: rgba(0, 0, 0,1);color: aqua;border: 1px solid aqua;margin-left: 150px;opacity: 1;}
+        }
+
+        .gmail{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/gmail.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+        .github{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/github2.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+        .linkedin{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/linkedin.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+        .whatsapp{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/whatsapp.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+
+        .copyright {background: linear-gradient(135deg, #0b0c10, #1f2833);text-align: center;padding: 20px 0;color: #66fcf1;box-shadow: 0 0 15px #1f2833;border-top: 2px solid #45a29e;border-bottom: 2px solid #45a29e;margin-top: 10px;border-radius: 12px;}
+        .copyright p {margin: 0;font-size: 24px;letter-spacing: 2px;}
+
+        .results{width: 1125px;height: 400px;border: 2px solid aqua;margin-top: 29px;border-radius: 10px;margin-left: 7px;box-shadow: 0px 0px 15px 7px aqua;}
+
+        .results-title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px yellow;margin-top: 15px;}
+
+        .results-title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+        .results-image{width: 280px;height: 280px;
+            /* border: 2px solid aqua; */
+            margin-left: 20px;margin-top: 25px;box-shadow: 0px 0px 25px 4px magenta;border: 4px solid transparent; animation-name: result-animation; animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;background-image: url(/ImagesAndVideos/empty\ image\ 2.png);background-size: cover;float: left;}
+        .results-image:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+        
+
+        .output{width: 400px;height: 70px;margin-top: 40px;border: 2px solid aqua;background-color: black;font-size: 30px;color: aqua;animation-name: result-animation;animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;box-sizing: border-box;padding-top: 15px;padding-left: 15px;margin-left: 20px;}
+        .output:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+        @keyframes result-animation 
+        { 0%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;box-shadow: 0px 0px 25px 4px rgb(0, 229, 255);}
+           25%{border-image: linear-gradient(90deg, #6f00ff 0%, #00fff7 20%, #000000 40%, #ff00e1 60%, #000000 80%, #00fff7 100%) 1;box-shadow: 0px 0px 25px 4px rgb(204, 255, 0);} 
+           50%{border-image: linear-gradient(90deg, #00ff00 0%, #000 20%, #00f 40%, #000 60%, #0ff 80%, #000 100%) 1;box-shadow: 0px 0px 25px 4px rgb(255, 106, 0);}
+           75%{border-image: linear-gradient(90deg, #0ff, #0ff 15%, #00f 30%, #0ff 45%, #f0f 60%, #0ff 75%, #0ff 100%) 1;box-shadow: 0px 0px 25px 4px WHITE;}
+           100%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;}
+        }
+
+        .upload-section{
+            width: 1130px;height: 350px;border: 2px solid aqua;margin-top: 50px;margin-left: 3px;box-shadow: 0px 0px 15px 7px aqua;background-color: black;
+        }
+
+        .upload-section-box1{width: 371px;height: 346px;border: 2px solid rgb(223, 26, 108);float: left;margin-left: 2px;}
+        .upload-section-box1:hover .box1-animation{animation-name: none;}
+        .upload-section-box1:hover{transition: 0.4s;transform: scaleX(1.01) scaleY(1.01);box-shadow: 0px 0px 15px 7px rgb(223, 26, 108);}
+        .box1-animation{width: 125px;height: 115px;animation-name: box1;animation-iteration-count: infinite;animation-duration: 10s;animation-delay: 0.1s;animation-fill-mode: both;animation-direction: alternate;box-shadow: 0px 0px 15px 5px aqua;border: 2px solid aqua;color: aqua;font-size: 20px;font-weight: bolder;text-align: center;box-sizing: border-box;padding-top:15px ;background-image: url(/ImagesAndVideos/animate-bg.webp);background-repeat: no-repeat;background-size: cover; position: relative;box-sizing: border-box;padding-top: 65px;color: greenyellow;border-radius: 15px;}
+        @keyframes box1{   
+            0%  {top: 0px;left: 0px;transform: rotate3d(1,1,0,0deg);}
+            25% {top: 0px;left: 250px;transform: rotate3d(1,1,0,90deg);}
+            50% {top: 230px;left: 250px;transform: rotate3d(1,1,0,180deg);}
+            75% {top: 230px;left: 0px;transform: rotate3d(1,1,0,270deg);}
+            100%{top: 0px;left: 0px;transform: rotate3d(1,1,0,360deg);}
+        }
+
+        
+
+        .upload-section-box2{width: 372px;height: 346px;border: 2px solid rgb(223, 26, 108);float: left;margin-left: 1px;}
+        .upload-section-box2-image{width: 260px;height: 260px;border: 4px solid aqua;color: red;font-size: 50px;box-shadow: 0px 0px 40px 4px aqua;margin-left: 52px;margin-top: 15px;background-image: url(/ImagesAndVideos/empty\ image\ 2.png);background-size: cover; position: relative; }
+        .upload-section-box2-image:hover{transform: scaleX(1.01) scaleY(1.01);box-shadow: 0px 0px 40px 4px rgb(223, 26, 108);transition: 0.7s;border: 4px solid rgb(223, 26, 108);}
+        #data{margin-top: 190px;margin-left: 45px;color: aqua;}
+        #data:hover{transform: scaleX(1.1) scaleY(1.1);transition: 0.5s;}
+        .image-button {margin-left: 85px;margin-top: 7px;width: 200px;height: 35px;font-size: 20px;}
+        .image-button:hover {transition: 0.3s;background-color: green;cursor: pointer;transform: scaleX(1.08) scaleY(1.08);box-shadow: 0px 0px 20px 7px aqua;font-weight: bolder;color: #e0ffff;border: 2px solid white;}
+
+        .upload-section-box3{width: 371px;height: 346px;border: 2px solid rgb(223, 26, 108);float: left;margin-left: 1px;}
+        .upload-section-box3:hover .box2-animation{animation-name: none;}
+        .upload-section-box3:hover{transition: 0.4s;transform: scaleX(1.01) scaleY(1.01);box-shadow: 0px 0px 15px 7px rgb(223, 26, 108);}
+        .box2-animation{width: 125px;height: 115px;animation-name: box2;animation-iteration-count: infinite;animation-duration: 10s;animation-delay: 0.1s;animation-fill-mode: both;animation-direction: alternate;box-shadow: 0px 0px 15px 5px aqua;border: 2px solid aqua;color: aqua;font-size: 20px;font-weight: bolder;text-align: center;box-sizing: border-box;padding-top:15px ;background-image: url(/ImagesAndVideos/animate-bg.webp);background-repeat: no-repeat;background-size: cover; position: relative;box-sizing: border-box;padding-top: 65px;color: greenyellow;border-radius: 15px;}
+        @keyframes box2{   
+            0%  {top: 0px;left: 250px;transform: rotate3d(1,1,0,0deg);}
+            25% {top: 0px;left: 0px;transform: rotate3d(1,1,0,90deg);}
+            50% {top: 230px;left: 0px;transform: rotate3d(1,1,0,180deg);}
+            75% {top: 230px;left: 250px;transform: rotate3d(1,1,0,270deg);}
+            100%{top: 0px;left: 250px;transform: rotate3d(1,1,0,360deg);}
+        }
+
+        .guide{ width: 1132px; height: 386px;background-color: black; border: 2px solid aqua;margin-top: 50px;margin-left: 1px;}
+        .guide-title{ width: 1130px; height: 40px;background-color: black; border: 2px solid rgb(174, 0, 255);margin-top: 7px;font-weight: bold;font-size: 22px;text-align: center;box-sizing: border-box;padding-top:2px;text-shadow: 4px 4px 15px rgb(135, 124, 204);color: aqua;box-shadow: 2px 2px 15px 2px aqua;}
+
+        .guide-title:hover{transition: 0.75s; transform: scaleX(1.1) scaleY(1.1) ;box-shadow: 4px 4px 20px 5px aqua;}
+
+        .guide-procedure-section{width: 1128px; height: 324px;background-color: black; border: 2px solid rgb(174, 0, 255);margin-top: 11px;}
+
+        .guide-procedure-section1{width: 560px;height:318px;border:2px solid white;float: left;margin-top: 1px;}
+        .step1{font-size: 15px;font-weight: bolder;color: aqua;}
+        .demo1{margin: auto;box-sizing: border-box;padding-top: 5px;padding-left: 5px;width: 300px;height: 250px;background-image: url(/ImagesAndVideos/upload\ image\ guide.png);background-size: cover;background-repeat: no-repeat;margin-left: 130px;}
+        .demo1:hover{transition: 1s;transform: scaleX(1.03) scaleY(1.048);}
+        .demo2{margin: auto;box-sizing: border-box;padding-top: 5px;padding-left: 5px;width: 300px;height: 250px;background-image: url(/ImagesAndVideos/predict\ image\ guide.png);background-size: cover;background-repeat: no-repeat;margin-left: 130px;}
+        .demo2:hover{transition: 1s;transform: scaleX(1.03) scaleY(1.048);}
+
+
+    @keyframes animated-title{0%{left: 0px;} 50%{left: 885px;} 100%{left: 0px;}}
+
+        .title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px rgb(219, 150, 203);}
+
+        .title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+
+        
+        .header{position: relative;width: 1140px;height: 70px;}
+        .header-logo         {box-sizing: border-box;width: 252px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; margin: auto;}
+        .header-logo:hover{transition: 0.5s;transform: scaleX(1.07) scaleY(1.35); box-shadow: 2px 2px 25px 2px aqua; position: relative;}
+
+        .header-ref          {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+        .header-ref:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+
+        .header-about-me     {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+        .header-about-me:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+
+        .header-about-proj   {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+        .header-about-proj:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+
+        .header-about-gen-det{box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+        .header-about-gen-det:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="main">
+        <div class="header">
+            <div class="header-logo">
+                <img src="/ImagesAndVideos/Qamar Raza-horizontal.png" width="248" height="65" title="Qamar Logo" alt="Logo">
+            </div>
+            <div class="header-ref"><a href="/references" style="text-decoration: none;color: aqua;">References</a></div>
+            <div class="header-about-me"><a href="/about-me" style="text-decoration: none;color: aqua;">About Me</a></div>
+            <div class="header-about-proj"><a href="/about-project" style="text-decoration: none;color: aqua;">About Project</a></div>
+            <div class="header-about-gen-det"><a href="/about-gender-detection" style="text-decoration: none;color: aqua;">About Gender Detection</a></div>
+        </div>
+        <hr>
+        <div class="title">
+            Gender Detection Through Facial Images
+        </div>
+        <hr>
+        <div style="width: 250px;height: 250px;border: 2px solid magenta;margin-top: 55px;animation-name: animated-title;animation-duration: 8s;animation-timing-function: ease-in;animation-iteration-count: infinite;animation-delay: 0.6s;position: relative;box-shadow: 0px 0px 15px 7px aqua;">
+            <video width="250" height="250" autoplay muted loop> <source src="/ImagesAndVideos/Animated Title.mp4" type="video/mp4"/> </video>
+        </div>
+
+        <div class="guide">
+            <div class="guide-title">How to predict</div>
+
+            <div class="guide-procedure-section">
+                <div class="guide-procedure-section1">
+                    <div class="step"><ul type="circle"> <li>1.     Select an image by choosing the file</li>  </ul></div>
+                    <div class="demo1"> </div>
+                </div>
+                <div class="guide-procedure-section1">
+                    <div class="step"><ul type="circle"> <li>2.     Click the "Upload & Predict" button to predict the gender</li>  </ul></div>
+                    <div class="demo2"> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="upload-section">
+            <div class="upload-section-box1">
+                <div class="box1-animation">Gender Detection</div>
+            </div>
+
+            <div class="upload-section-box2">
+                <form action="/predict#results-section" method="post" enctype="multipart/form-data">
+                    <!-- <div class="upload-section-box2-image" id="preview-box">
+                        <div id="select-image">
+                            <input type="file" name="file" id="data" title="Select Image" onchange="previewImage(event)" required>
+                        </div>
+                    </div> -->
+                    <div class="upload-section-box2-image" id="preview-box">
+    <label for="data" style="
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        cursor: pointer; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        margin-top: 70px;
+        color: greenyellow;
+        font-weight: bolder;
+        font-size: 25px;
+        background-color: transparent;
+        z-index: 10;">
+        Click to Upload Image
+    </label>
+</div>
+<input type="file" name="file" id="data" title="Select Image" onchange="previewImage(event)" required style="display: none;">
+                            <button class="image-button" type="submit">Upload & Predict</button>
+                            <button type="reset" class="image-button" style="margin-left: 15px;margin-top: 7px;width: 34px;height: 35px;font-size: 20px;padding-left:2px;" onclick="clearPreview()">🔄</button>
+                </form>
+            </div>
+
+            <div class="upload-section-box3">
+                <div class="box2-animation">Gender Detection</div>
+            </div>
+        </div>
+
+
+        <div class="results" id="results-section">
+            <div class="results-title">Results</div>
+
+            <div style="width: 1130px;height: 330px;">
+                <div class="results-image">
+                    {%if uploaded_image%}
+                        <div>
+                            <img src="{{ uploaded_image }}" alt="Uploaded Image" style="width:280px;height: 280px; border-radius:10px;">
+                        </div>
+                    {%endif%}
+                </div>
+                <div style="width: 700px;height: 280px;float: left;margin-left: 30px;margin-top: 30px;">
+                      {% if prediction and confidence %}
+                    <div class="output">Predicted Gender: {{prediction}}</div>
+                    <div class="output">Confidence: {{confidence}}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- It displays the results -->
+        </div>
+
+        <hr>
+        <div style="width: 1140px;height: 350px;border-radius: 15px;border: 1px solid aqua;box-sizing: border-box;padding-top: 3px;background-color: black;background-repeat: no-repeat;background-size: cover;">
+            <div style="width: 250px;height: 250px;border: 2px solid magenta;animation-name: animated-title;animation-duration: 8s;animation-timing-function: ease-in;animation-iteration-count: infinite;animation-delay: 0.6s;position: relative;box-shadow: 0px 0px 15px 7px aqua;color: white;margin-top: 50px;">
+                
+                <video width="250" height="250" autoplay muted loop > <source src="/ImagesAndVideos/Animated Logo.mp4" type="video/mp4"/> </video>
+            </div>
+        </div>
+
+        
+
+        <div class="footer">
+            <div style="width: 500px;height: 100px;border: 1px solid white;margin-left: 330px;margin-top:10px;border-radius: 10px;background-color: black;padding-top: 10px;padding-bottom: 10px;">
+                <div class="footer-title">My Contacts</div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/gmail.png" width="40" height="40" style="border-radius: 7px;">
+                    </div>
+                    <div class="footer-icon-info"><p>Gmail:</p>  <p>raza8bb805</p> <p>@gmail.com</p></div>
+                    <div class="footer-icon-name1">Gmail</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://github.com/QamarRaza92" target="_blank">
+                        <img src="/ImagesAndVideos/github2.png" width="40" height="40" style="border-radius: 7px;" title="Link to my Github">
+                        </a>
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">Github</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://www.linkedin.com/in/qamar-raza-090693280?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BCHxh9v%2FMQVWYDhzVKNF2wg%3D%3D" target="_blank"> 
+                             <img src="/ImagesAndVideos/linkedin.png" width="40" height="40" style="border-radius: 7px;" title="Link to my LinkedIn">
+                        </a>
+                       
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">LinkedIn</div>
+                </div>
+                <div class="footer-body">  
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/whatsapp.png" width="40" height="40" style="border-radius: 7px;" > 
+                    </div>
+                    <div class="footer-icon-info"><p>Whatsapp:</p> <p>+91 8319417300</p></div>
+                    <div class="footer-icon-name1">Whatsapp</div>
+                </div>
+               
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Gender Detection Through Facial Images - Model By QAMAR RAZA.</p>
+            </div>
+        </div>
+
+            
+
+</body>
+<script>
+    function previewImage(event) {
+        let previewBox = document.getElementById("preview-box");
+        let fileInput = document.getElementById("data");
+        let label = document.querySelector('label[for="data"]');
+
+        // Check if a file was actually selected
+        if (event.target.files.length === 0) {
+            return;
+        }
+
+        // Agar pehle se koi image hai to use hata de
+        let existingImg = previewBox.querySelector('img');
+        if (existingImg) {
+            existingImg.remove();
+        }
+        
+        // Naya img element banayega
+        let img = document.createElement("img");
+        img.src = URL.createObjectURL(event.target.files[0]);
+
+        // Image ko style karega
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.objectFit = "cover";
+        img.style.position = "absolute";
+        img.style.top = "0";
+        img.style.left = "0";
+        img.style.borderRadius = "10px";
+        img.style.zIndex = "1";
+
+        // `label` ko chupa dega
+        label.style.display = "none";
+        
+        // `preview-box` mein image daalega
+        previewBox.appendChild(img);
+    }
+
+    function clearPreview() {
+        let previewBox = document.getElementById("preview-box");
+        let fileInput = document.getElementById("data");
+        let label = document.querySelector('label[for="data"]');
+
+        // Preview image ko remove karega
+        let existingImg = previewBox.querySelector('img');
+        if (existingImg) {
+            existingImg.remove();
+        }
+
+        // `input` file field ki value ko reset karega
+        fileInput.value = "";
+        
+        // `label` ko wapas dikhayega
+        label.style.display = "flex";
+    }
+</script>
+<!-- <script>
+
+    function previewImage(event) {
+    let imgDiv = document.getElementById("preview-box");
+    imgDiv.innerHTML = "";
+    let img = document.createElement("img");
+    img.src = URL.createObjectURL(event.target.files[0]);
+    img.style.width = "245px";
+    img.style.height = '245px'
+    img.style.borderRadius = "10px";
+    imgDiv.appendChild(img);
+}
+
+function clearPreview() {
+    let previewBox = document.getElementById("preview-box");
+    let fileInput = document.getElementById("data");
+    let label = document.querySelector('label[for="data"]');
+
+    // Preview image ko remove karega
+    let existingImg = previewBox.querySelector('img');
+    if (existingImg) {
+        existingImg.remove();
+    }
+
+    // `input` file field ki value ko reset karega
+    fileInput.value = "";
+    
+    // Agar aapne input ko chupa diya tha, to use wapas dikhayega
+    fileInput.style.display = "block"; // Ya jo bhi aap chahein, jaise "inline-block"
+
+    // Label ko wapas dikhayega
+    label.style.display = "flex";
+}
+
+
+
+// function previewImage(event) {
+//     let imgDiv = document.getElementById("preview-box");
+//     imgDiv.innerHTML = "";
+//     let img = document.createElement("img");
+//     img.src = URL.createObjectURL(event.target.files[0]);
+//     img.style.width = "245px";
+//     img.style.height = '245px'
+//     img.style.borderRadius = "10px";
+//     imgDiv.appendChild(img);
+// }
+</script> -->
+</html>
+
+

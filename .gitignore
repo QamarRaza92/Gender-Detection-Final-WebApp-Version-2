@@ -1,0 +1,7 @@
+# Ignore Python cache files
+__pycache__/
+
+# Git ko in files aur folders ko ignore karne ko bolo
+GenderDetection.keras
+ImagesAndVideos/Gender-Detection-Model Complete Code.mp4
+uploads/

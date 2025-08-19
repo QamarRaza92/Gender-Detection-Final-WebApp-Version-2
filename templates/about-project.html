@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+
+    <style>
+    .main{ width: 1140px; height: 8450px; background-image: url(/ImagesAndVideos/bg.jpg);}
+
+
+    /* Header with contacts and copyright content is below */
+    .header{position: relative;width: 1140px;height: 70px;}
+    .header-logo         {box-sizing: border-box;width: 252px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; margin: auto;}
+    .header-logo:hover{transition: 0.5s;transform: scaleX(1.07) scaleY(1.35); box-shadow: 2px 2px 25px 2px aqua; position: relative;}
+    .header-section      {box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: black; color: aqua; font-size: 20px; font-weight: bolder; text-align: center;padding-top: 20px;}
+    .header-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px aqua;}
+    .header-current-section{box-sizing: border-box;width: 222px;height: 70px;border: 2px solid aqua;float: left;background-color: aqua; color: black; font-size: 22px; font-weight: bolder; text-align: center;padding-top: 20px;animation-name: result-animation;animation-duration: 3s;animation-iteration-count: infinite;animation-fill-mode: both;}
+    .header-current-section:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 2px 2px 25px 2px black;}
+    @keyframes result-animation 
+        { 0%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;box-shadow: 0px 0px 25px 4px rgb(0, 229, 255);}
+           25%{border-image: linear-gradient(90deg, #6f00ff 0%, #00fff7 20%, #000000 40%, #ff00e1 60%, #000000 80%, #00fff7 100%) 1;box-shadow: 0px 0px 25px 4px rgb(204, 255, 0);} 
+           50%{border-image: linear-gradient(90deg, #00ff00 0%, #000 20%, #00f 40%, #000 60%, #0ff 80%, #000 100%) 1;box-shadow: 0px 0px 25px 4px rgb(255, 106, 0);}
+           75%{border-image: linear-gradient(90deg, #0ff, #0ff 15%, #00f 30%, #0ff 45%, #f0f 60%, #0ff 75%, #0ff 100%) 1;box-shadow: 0px 0px 25px 4px WHITE;}
+           100%{border-image: linear-gradient(90deg, #000, #0ff 20%, #000 40%, #f0f 60%, #000 80%) 1;}
+        }
+    .title{width: 800px;height: 45px;color: aqua;font-weight: bolder;font-size: 30px;text-align: center;margin: auto;text-align: center;background-color: black;border: 2px solid aqua;text-shadow: 2px 2px 10px rgb(219, 150, 203);}
+    .title:hover{box-shadow: 2px 2px 25px 2px aquamarine;transform: scaleX(1.05) scaleY(1.05);transition: 1s;}
+    /* Header content ends here */
+
+
+
+
+
+
+
+    .container{width: 1100px;height: 8042px;border: 2px solid aqua;box-shadow: 0px 0px 15px 7px aqua;background-color: black;margin-left: 20px;border-radius: 10px;}
+    .section1{width: 1100px;margin-top: 10px;height: 250px;border: 1px solid rgb(103, 208, 219);}
+    .name{font-weight: bolder;width: 450px;height: 70px;font-size: 30px;color: aqua;border: 1px solid rgb(130, 83, 147);margin-top: 10px;margin-left: 20px;box-sizing: border-box;padding-top: 20px;box-sizing: border-box;padding-left: 20px;border: 1px solid rgba(0, 255, 255, 0.2);border-radius: 10px;}
+    .name:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+    .brief-intro{font-weight: bolder;color: #bbcdff;font-size: 20px;width: 450px;height: 300px;background: linear-gradient(145deg, #1f2e3d, #0d1b2a);border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);margin-left: 20px;margin-top: 10px;box-sizing: border-box;padding-top: 20px;padding-left: 20px;border-radius: 10px;}
+    .brief-intro:hover{transition: 0.5s;transform: scaleX(1.02) scaleY(1.02);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);}
+    .card {width: 450px;height: 400px;border-radius: 15px;
+        /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+        background: linear-gradient(135deg, #0f2e3d, #1a3b4d);
+        border: 1px solid rgba(0, 255, 255, 0.2);box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);border-radius: 5px;padding: 10px;margin-left: 20px;transition: 0.3s ease;float: left;margin-top: 15px;color:  #bbcdff;font-size: 15px;}
+    .card:hover {box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);transform: translateY(-5px);}
+
+
+
+
+
+
+
+
+
+    .back-home{width: 150px;height: 27px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 13px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin-left: 507px;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .back-home:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+
+
+    /* Footer with contacts and copyright content is below */
+    .footer-title{width: 200px;height: 35px;border: 1px solid aqua;border-radius: 10px;margin-top: 10px;font-size: 20px;color: aqua;background-color: black;box-shadow: 0px 0px 15px 2px aqua;margin: auto;text-align: center;box-sizing: border-box;padding-top: 4px;}
+    .footer-title:hover{transition: 1s;transform: scaleX(1.05) scaleY(1.05);}
+    .footer-body{width: 123px;height: 70px;border: 0px solid aqua;float: left;margin-left: 0px;}
+    .footer-icon-info{margin-left:90px;margin-top: 25px; width: 16px;height:20px;border: 0px solid red;font-size: 3px;background-color: rgb(0, 0, 0);text-align: center;padding-top: 0px;border-radius: 2px;}
+    .footer-icon{width: 40px;height: 40px; margin-top: 10px;border: 0px solid aqua;margin-left: 40px;border-radius: 7px;float: left;}
+    .footer-icon:hover{transition: 0.3s;transform: scaleX(1.15) scaleY(1.15);box-shadow: 0px 0px 10px 0px aqua;}
+    .footer-icon-name1{margin-top: 10px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left: 36px; border: 1px solid aqua;border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2{margin-top: -12px;text-align: center;font-size: 10px;color: aqua;width: 50px;margin-left:36px;box-sizing: border-box;padding-top: 0px;  border-radius: 5px; box-shadow: 0px 0px 10px 2px aqua;}
+    .footer-icon-name2:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon-name1:hover{transition: 0.5s;transform: scaleX(1.15) scaleY(1.15);cursor:context-menu;}
+    .footer-icon:hover ~ .footer-icon-info{transition: 1.5s;animation-name: footer-icon;animation-iteration-count: 1;animation-fill-mode: both;animation-duration: 0.6s;animation-timing-function: ease-in;}
+    @keyframes footer-icon{
+        0%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,0deg);opacity: 0.1;}
+        25%{transform: scaleX(1) scaleY(1) rotate3d(1,1,0,90deg);opacity: 0.3;}
+        50%{transform: scaleX(2) scaleY(1) rotate3d(1,1,0,180deg);opacity: 0.6;}
+        75%{transform: scaleX(4) scaleY(3) rotate3d(1,1,0,270deg);opacity: 0.8;}
+        100%{transform: scaleX(7) scaleY(5) rotate3d(1,1,0,360deg);background-color: rgba(0, 0, 0,1);color: aqua;border: 1px solid aqua;margin-left: 150px;opacity: 1;}
+    }
+    .gmail{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/gmail.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .github{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/github2.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .linkedin{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/linkedin.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .whatsapp{width: 45px;height: 40px;border: 1px solid aqua;float: left;margin-left: 65px;border-radius: 5px;background-image: url(/ImagesAndVideos/whatsapp.png);background-repeat: no-repeat;background-size: cover;background-position: center;}
+    .copyright {background: linear-gradient(135deg, #0b0c10, #1f2833);text-align: center;padding: 20px 0;color: #66fcf1;box-shadow: 0 0 15px #1f2833;border-top: 2px solid #45a29e;border-bottom: 2px solid #45a29e;margin-top: 10px;border-radius: 12px;}
+    .copyright p {margin: 0;font-size: 24px;letter-spacing: 2px;}
+    /* Footer content ends here */
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="header-logo">
+                <img src="/ImagesAndVideos/Qamar Raza-horizontal.png" width="248" height="65" title="Qamar Logo" alt="Logo">
+            </div>
+            <div class="header-section"><a href="/references" style="text-decoration: none;color: aqua;">References</a></div>
+            <div class="header-section"><a href="/about-me" style="text-decoration: none;color: aqua;">About Me</a></div>
+            <div class="header-current-section"><a href="/about-project" style="text-decoration: none;color: black;">About Project</a></div>
+            <div class="header-section"><a href="/about-gender-detection" style="text-decoration: none;color: aqua;">About Gender Detection</a></div>
+        </div>
+        <hr>
+        <div class="title">
+            About Project
+        </div>
+        <hr>
+
+
+
+
+
+
+        <div class="container">
+            <div class="section1" style="height: 530px;">
+                <div class="name">Introduction</div>
+                <div style="width: 1100px;height: 440px;">
+                    <div class="brief-intro" style="float: left;width:700px;height:430px;color:#bbcdff;font-size: 20px;line-height:1.5;">
+                        <strong style="font-size: 25px;color: aqua;">Title: </strong> <span style="display: inline;">Gender Detection Through Facial Images</span> <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Brief Description: </strong> This project leverages deep learning(CNN) to accurately detect gender from facial images. Built with a clean and efficient backend, it allows users to upload an image and receive instant predictions, making it ideal for applications in personalization, analytics, and security. <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Key Highlights: </strong>
+                        <ul style="margin-top: 5px;">
+                            <li> <div style="float: left;margin-left: 5px;margin-top: 0px;"><img src="/ImagesAndVideos/cnn.png" alt="" style="width: 20px;height: 20px;"></div> <div style="float: left;margin-left: 10px;">CNN & Deep Learning Backbone</div></li>
+                            <li><div style="float: left;margin-left: 5px;"><img src="/ImagesAndVideos/real-time.png" alt="" style="width: 20px;height: 20px;"></div> <div style="float: left;margin-left: 10px;">Real-time Predictions</div></li>
+                            <li><div style="float: left;margin-left: 5px;"><img src="/ImagesAndVideos/user-friendly.png" alt="" style="width: 20px;height: 20px;"></div> <div style="float: left;margin-left: 10px;">User Friendly Interface</div></li>
+                            <li><div style="float: left;margin-left: 5px;"><img src="/ImagesAndVideos/lightweight.png" alt="" style="width: 20px;height: 20px;"></div> <div style="float: left;margin-left: 10px;">Lightweight Model for Faster Inference</div></li>
+                        </ul>
+
+                    </div>
+                    <div style="width: 350px;height: 430px;float: left;">
+                        <img src="/ImagesAndVideos/gender-detection.webp" alt="gender detection" title="Gender Detection" style="width: 300px;height: 300px;margin-top: 80px;margin-left: 40px;border-radius: 20px;border: 1px solid #bbcdff;box-shadow: 0px 0px 10px 1px aqua;">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section1" style="height: 1025px;">
+                <div class="name">How It Works</div>
+                <div class="brief-intro" style="width: 700px; height:300px;color:#bbcdff;font-size: 20px;">
+                     <strong style="font-size: 25px;color: aqua;">STEP I: </strong> <span style="display: inline;">Upload An Image of Human Face By Clicking The Upload Button</span>
+                     <div style="width: 300px; height: 250px;margin: auto;"><img src="/ImagesAndVideos/upload image guide.png" alt=" Upload Guide" title="Upload Image Guide" style="width: 200px;height: 200px;margin-top: 20px;margin-left: 50px;"> </div>
+                </div>
+                <div class="brief-intro" style="width: 700px; height:300px;color:#bbcdff;font-size: 20px;">
+                     <strong style="font-size: 25px;color: aqua;">STEP II: </strong> <span style="display: inline;">Click The Predict Button For Prediction</span>
+                     <div style="width: 300px; height: 250px;margin: auto;"><img src="/ImagesAndVideos/predict image guide.png" alt=" Upload Guide" title="Predict Image Guide" style="width: 200px;height: 200px;margin-top: 20px;margin-left: 50px;"> </div>
+                </div>
+                <div class="brief-intro" style="width: 700px; height:300px;color:#bbcdff;font-size: 20px;">
+                     <strong style="font-size: 25px;color: aqua;">STEP III: </strong> <span style="display: inline;">See The Results In The Result Section</span>
+                     <div style="width: 300px; height: 250px;margin: auto;"><img src="/ImagesAndVideos/upload image guide.png" alt=" Upload Guide" style="width: 200px;height: 200px;margin-top: 20px;margin-left: 50px;"> </div>
+                </div>
+
+            </div>
+
+            <div class="section1" style="height: 2900px;">
+                <div class="name">Model Building</div>
+
+                <div style="width: 1100px;height: 730px;">
+                    <div class="brief-intro" style="float: left;width:700px;height:720px;color:#bbcdff;font-size: 20px;line-height:1.5;">
+                        <strong style="font-size: 25px;color: aqua;">Phase 1: </strong> <span style="display: inline;">Data Collection</span> <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Brief Description: </strong> Data was sourced from kaggle. The data named "Gender Detection & Classification - Face Dataset" was used for training the model. It contains two categories i.e. male and female. After the data collection, the images were rescaled to 256X256 pixels and cleaned through "Tensorflow". For the visualization of images before and after prediction, "OpenCV" library was used which provides easy implementation for visualizing an images<br>
+                        <img src="/ImagesAndVideos/kaggle-data.png" alt="data source image" title="Kaggle Dataset" style="width: 300px;height: 200px;border-radius: 10px;margin-top: 10px;margin-left: 10px ;border: 2px solid aqua;">
+                        <img src="/ImagesAndVideos/sample-visualization.jpg" alt="sample visualization" title="Sample Image Visualization" style="width: 300px;height: 200px;border-radius: 10px;margin-top: 10px;margin-left: 30px ;border: 2px solid aqua;">
+                        <br> 
+                        <strong style="font-size: 25px;color: aqua;margin-left: 55px;">Dataset from Kaggle</strong>
+                        <strong style="font-size: 25px;color: aqua;margin-left: 85px;">Sample Image Visualized</strong>
+                        <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Key Highlights: </strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Chose "Gender Detection & Classification - Face Dataset" from kaggle</li>
+                            <li>Modified and cleaned the images before training</li>
+                            <li>Visualized the images to select suitable training process</li>
+                        </ul>
+
+                    </div>
+                    <div style="width: 350px;height: 430px;float: left;">
+                        <img src="/ImagesAndVideos/data-collection.png" alt="data coollection image" title="Data Collction" style="width: 330px;height: 300px;margin-top: 212px;margin-left: 40px;border-radius: 20px;border: 1px solid #bbcdff;box-shadow: 0px 0px 10px 1px aqua;">
+                    </div>
+                </div>
+            
+
+
+
+                <div style="width: 1100px;height: 700px;">
+                    <div class="brief-intro" style="float: left;width:700px;height:690px;color:#bbcdff;font-size: 20px;line-height:1.5;">
+                        <strong style="font-size: 25px;color: aqua;">Phase 2: </strong> <span style="display: inline;">Using Transfer Learning</span> <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Brief Description: </strong> Transfer Learning allows us to use the power of an already well built and trained model. In my projct, instead of training a CNN model from scratch, I used the very famous VGG16 model through transfer learning and used the weights it had in the 'Imagenet' dataset. Imagenet cotains over 14 million well detailed images featuring over 20,000 species like cat, human, baloon etc.<br>
+                        <img src="/ImagesAndVideos/vgg16.jpg" alt="vgg16 model" title="VGG16 CNN Model" style="width: 350px;height: 200px;border-radius: 20px;margin-top: 10px;margin-left: 170px;border: 2px solid aqua;"> <br> 
+                        <strong style="font-size: 25px;color: aqua;margin-left: 240px;">The VGG16 Model</strong>
+                        
+                        <br> 
+                        <strong style="font-size: 25px;color: aqua;">Key Highlights: </strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Used Transfer Learning</li>
+                            <li>Chose VGG16 Model for my project</li>
+                            <li>Used VGG16's weights on the Imagenet Dataset</li>
+                        </ul>
+
+                    </div>
+                    <div style="width: 350px;height: 430px;float: left;">
+                        <img src="/ImagesAndVideos/transfer-learning.webp" alt="transfer-learning" title="Transfer Learning Detection" style="width: 300px;height: 400px;margin-top: 150px;margin-left: 40px;border-radius: 20px;border: 1px solid #bbcdff;box-shadow: 0px 0px 10px 1px aqua;">
+                    </div>
+                </div>
+
+                <div style="width: 1100px;height: 670px;">
+                    <div class="brief-intro" style="float: left;width:700px;height:660px;color:#bbcdff;font-size: 20px;line-height:1.5;">
+                        <strong style="font-size: 25px;color: aqua;">Phase 3: </strong> <span style="display: inline;">Fine Tuning</span> <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Brief Description: </strong> Fine Tuning is the concept where a pre-trained model is tuned according to your data. The early layers are freezed before training so that their weights will not be affected. At last, I added one more "Hidden Layer" was added with 256 neurons along with "ReLU" activation function. L2 Regularization was imposed on weights and biases to avoid overfitting. <br>
+                        <img src="/ImagesAndVideos/fine-tuning.png" alt="fine tuning" title="Fine Tuning" style="width: 300px;height: 200px;border-radius: 10px;margin-top: 10px;margin-left: 170px ;border: 1px solid aqua;"> <br> 
+                        <strong style="font-size: 25px;color: aqua;margin-left: 270px;">Fine Tuning </strong>
+                        <br>
+                        <strong style="font-size: 25px;color: aqua;">Key Highlights: </strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Froze the top layers</li>
+                            <li>Added one more hidden layer of 256 neurons</li>
+                            <li>Applied Regularization to kernel and bias weights</li>
+                        </ul>
+
+                    </div>
+                    <div style="width: 350px;height: 430px;float: left;">
+                        <img src="/ImagesAndVideos/Fine_tuning.webp" alt="fine tuning" title="Fine Tuning" style="width: 300px;height: 300px;margin-top: 185px;margin-left: 40px;border-radius: 20px;border: 1px solid #bbcdff;box-shadow: 0px 0px 10px 1px aqua;">
+                    </div>
+                </div>
+                <div style="width: 1100px;height: 705px;">
+                    <div class="brief-intro" style="float: left;width:700px;height:695px;color:#bbcdff;font-size: 20px;line-height:1.5;">
+                        <strong style="font-size: 25px;color: aqua;">Phase 4: </strong> <span style="display: inline;">Model Training</span> <br> <br>
+                        <strong style="font-size: 25px;color: aqua;">Brief Description: </strong> To train the model, tensorflow with keras was employed which provide a very simple implementation of Convolution Neural Network (CNN). "Adam optimizer" along with loss function "Binary Cross Entropy" were used for training. I also rendered the concept of "Early Stopping" during training to prevent overfitting. "Early Stopping" prevents the model from excessive training because it causes overfitting sometimes.<br>
+                        <img src="/ImagesAndVideos/training.png" alt="my model training" title="My Model Training" style="width: 300px;height: 200px;border-radius: 10px;margin-top: 10px;margin-left: 170px ;border: 2px solid aqua;"> <br> 
+                        <strong style="font-size: 25px;color: aqua;margin-left: 240px;">Model Training</strong>
+                        <br>
+                        <strong style="font-size: 25px;color: aqua;">Key Highlights: </strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Chose "Adam" optimizer for stable training</li>
+                            <li>Chose "Binary Cross Entropy" loss function</li>
+                            <li>Used "Early Stopping" to prevent overfitting</li>
+                        </ul>
+
+                    </div>
+                    <div style="width: 350px;height: 430px;float: left;">
+                        <img src="/ImagesAndVideos/training2.png" alt="CNN training image" title="CNN Model Training" style="width: 330px;height: 300px;margin-top: 200px;margin-left: 40px;border-radius: 20px;border: 1px solid #bbcdff;box-shadow: 0px 0px 10px 1px aqua;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section1" style="height: 1120px;">
+                <div class="name">Validation and Visualization</div>
+                <div class="brief-intro" style="float: left;width:1050px;height:1010px;color:#bbcdff;font-size: 15px;line-height:1.5;">
+                    <strong style="font-size: 25px;color: aqua;margin-left: 300px;">Training & Validation Graphs </strong>
+
+                    <div class="card" style="margin-left:25px;margin-top:40px;border-radius: 10px;">
+                        <img src="/ImagesAndVideos/train-vs-test-accuracy.png" alt="Accuracy Plot" title="Training vs Test Accuracy"  style="width: 300px;height: 200px;border-radius:20px;border: 2px solid aqua;margin-top: 10px;margin-left: 70px;"><br>
+                        <span style="color: aqua;font-size: 20px;margin-left: 85px;">Figure: </span>Training vs Validation Accuracy
+                        <br> <br>
+                        <div style="width: 430px;height: 120px; margin-left: 10px;border: 1px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 10px;box-sizing: border-box;padding-left: 5px;padding-top: 5px;text-align: justify;padding-right: 5px;">
+                            It can be seen from the image that the training and validation accuracy of the model is at a very good fit.
+                            There is not big difference in training and validation score of that image which symbolizes stable training.
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 40px;border-radius: 10px;">
+                        <img src="/ImagesAndVideos/train-vs-test-loss.png" alt="Accuracy Plot"   title="Training vs Test Loss" style="width: 300px;height: 200px;border-radius:20px;border: 2px solid aqua;margin-top: 10px;margin-left: 70px;"><br>
+                        <span style="color: aqua;font-size: 20px;margin-left: 85px;">Figure: </span>Training vs Validation Loss
+                        <br> <br>
+                        <div style="width: 430px;height: 120px; margin-left: 10px;border: 1px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 10px;box-sizing: border-box;padding-left: 5px;padding-top: 5px;text-align: justify;padding-right: 5px;">
+                           From the above graph, it can be clearly observed that the training and validation loss were very stable and almost same throughout the training process, which demonstrates that the training was well balanced and stable.
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-left: 25px;margin-top: 40px;border-radius: 10px;">
+                        <img src="/ImagesAndVideos/confusion-matrix.png" alt="confusion matrix"  title="Confusion Matrix"style="width: 300px;height: 200px;border-radius:20px;border: 2px solid aqua;margin-top: 10px;margin-left: 70px;"><br>
+                        <span style="color: aqua;font-size: 20px;margin-left: 85px;">Figure: </span>Confusion Matrix
+                        <br> <br>
+                        <div style="width: 430px;height: 120px; margin-left: 10px;border: 1px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 10px;box-sizing: border-box;padding-left: 5px;padding-top: 5px;text-align: justify;padding-right: 5px;">
+                            The confusion matrix is also given above where the number of true positive(TP), true negative(TN), false positive(FP) and false negative(FN) are shown through a heatmap. Number of miss-classifications are very less as compared to correct classifications 
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 40px;border-radius: 10px;">
+                        <img src="/ImagesAndVideos/performace-metrics.png" alt="performance metrics" title="Performance Metrics Comparison" style="width: 300px;height: 200px;border-radius:20px;border: 2px solid aqua;margin-top: 10px;margin-left: 70px;"><br>
+                        <span style="color: aqua;font-size: 20px;margin-left: 85px;">Figure: </span>Performance Metrics Comparison
+                        <br> <br>
+                        <div style="width: 430px;height: 120px; margin-left: 10px;border: 1px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 10px;box-sizing: border-box;padding-left: 5px;padding-top: 5px;text-align: justify;padding-right: 5px;">
+                            All 4 metrics are shown through a bar graph. Their scores can be easily compared through this. One key outcome here is that; all 4 of them have very identical scores which shows that performance is balanced
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="section1" style="height: 930px;">
+                <div class="name">Model Ready</div>
+
+                <div class="brief-intro" style="width: 1050px;height: 405px;">
+                    <div style="width: 520px;height:310px;float: left;margin-top: 20px;">
+                        <img src="/ImagesAndVideos/model-summary2.png" alt="model summary image" title="Final Model Summary" style="width: 510px;height: 310px;border: 2px solid aqua;border-radius: 12px;">
+                        <strong style="color: aqua;margin-left: 150px;">Figure: </strong> <span>Model Summary</span>
+                    </div>
+
+                    <div style="width: 500px;height: 310px;float: left; margin-left: 0px;margin-top: 20px; border: 2px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 12px;font-size: 20px;color:#bbcdff;box-sizing: border-box;padding-top: 60px;padding-left: 20px;padding-right: 20px;text-align: justify;">
+                        <strong style="color: aqua;font-size: 25px;text-align: center;margin-left: 140px;">Model Summary: </strong> <br>
+                        This gender detection model uses VGG16 (with frozen weights) to extract facial features, followed by a flattening layer and two dense layers (256 neurons + 1 output neuron). With 23.1M total parameters (only 8.4M trainable), it combines transfer learning's power with efficient fine-tuning for accurate male/female classification.
+                    </div>
+                </div>
+
+                <div class="brief-intro" style="width: 1050px;height: 405px;">
+                    <div style="width: 520px;height: 310px;float: left; ;margin-top: 20px; background-color: black;">
+
+                        <iframe src="https://drive.google.com/file/d/1sQwOxMgCUINKOedXOgGyF0cLRVWXECIq/preview" 
+        width="510" 
+        height="310" 
+        style="border-radius: 12px;border: 2px solid aqua;"
+        allow="autoplay">
+</iframe>
+                        <!-- <video  title='Video of "Gender Detection Model" Code' loop autoplay muted controls style="width: 510px;height: 310px;border-radius: 12px;border: 2px solid aqua;">
+                            <source src="/ImagesAndVideos/Gender-Detection-Model Complete Code.mp4">
+                        </video> -->
+                        <!-- <video title='Video of "Gender Detection Model" Code' loop autoplay muted controls 
+       style="width: 510px;height: 310px;border-radius: 12px;border: 2px solid aqua;">
+    <source src="https://drive.google.com/uc?export=download&id=1sQwOxMgCUINKOedXOgGyF0cLRVWXECIq" type="video/mp4">
+    Your browser does not support the video tag.
+</video> -->
+
+                        <strong style="color: aqua;margin-left: 80px;">Video: </strong> <span>Code of Gender Detection Model</span>
+                    </div>
+
+                    <div style="width: 500px;height: 310px;float: left; margin-left: 0px;margin-top: 20px; border: 2px solid aqua;background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);border-radius: 12px;font-size: 20px;color:#bbcdff;box-sizing: border-box;padding-top: 60px;padding-left: 20px;padding-right: 20px;text-align: justify;">
+                        <strong style="color: aqua;font-size: 25px;margin-left: 50px;">Code of Gender Detection Model: </strong> <br>
+                        The video is a complete walkthrough over the code which I coded while building this "Gender Detection Model". I provide complete transparency on my model and everything related to that. The video shows the code from beginning to the end where all phases are covered; from data collection to model training to model fine tuning to visualizing result
+                    </div>
+                </div>
+            </div>
+
+            <div class="section1" style="height: 940px;">
+                <div class="name">Designing The Front-End</div>
+                <div class="brief-intro" style="width: 700px;height: 200px;">
+                    <strong style="font-size: 25px;color: aqua;">Phase 1: Theme & Colors</strong>
+                    <ul style="width: 46\70px;line-height: 1.5;margin-left: -30px;float: left;">
+                        <li>Tried multiple palettes → finalized <strong>Black + Aqua Glow</strong></li>
+                        <li>Used contrast for readability &amp; modern look</li>
+                        <li>Added soft neon border &amp; text glow</li>
+                    </ul>
+                    <div style="border: 1px solid aqua;width: 150px;height: 150px;margin-left: 25px;margin-top: -25px;background-color: black;border-radius: 10px; float: left;box-sizing: border-box; padding-top: 55px;color: aqua;font-size: 30px;padding-left: 8px;box-shadow: 0px 0px 10px 2px aqua;text-shadow: 0px 0px 5px white;">Some Text</div>
+
+                </div>
+
+                <div class="brief-intro" style="width: 700px;height: 200px;">
+                    <strong style="font-size: 25px;color: aqua;">Phase 2: Layout Planning</strong>
+                    <ul style="width: 450px;line-height: 1.5;margin-left: -30px;">
+                        <li>Sketched 5+ wireframe ideas on paper</li>
+                        <li>Tested multiple placements for sections</li>
+                        <li>Chose most balanced &amp; user-friendly structure</li>
+                    </ul>
+                    <div style="border: 1px solid aqua;width: 150px;height: 150px;margin-left: 500px;margin-top: -155px;background-color: black;border-radius: 10px; float: left;box-sizing: border-box; color: aqua;font-size: 30px;box-shadow: 0px 0px 10px 2px aqua;text-shadow: 0px 0px 5px white;background-image: url(/ImagesAndVideos/frame-design.png);background-repeat: no repeat;background-size: cover;">
+                    </div>
+
+                </div>
+
+                <div class="brief-intro" style="width: 700px;height: 200px;">
+                    <strong style="font-size: 25px;color: aqua;">Phase 3 : Styling & Consistency</strong>
+                    <ul style="width: 450px;margin-left: -30px;line-height: 1.5;">
+                        <li>Same font, spacing, and border style across all pages</li>
+                        <li>Reused design elements for harmony</li>
+                        <li>Aqua highlights for important sections</li>
+                    </ul>
+                    <div style="border: 1px solid aqua;width: 150px;height: 150px;margin-left: 500px;margin-top: -155px;background-color: black;border-radius: 10px; float: left;box-sizing: border-box; color: aqua;font-size: 30px;box-shadow: 0px 0px 10px 2px aqua;text-shadow: 0px 0px 5px white;background-image: url(/ImagesAndVideos/consistency.png);background-repeat: no repeat;background-size: cover;">
+                    </div>
+
+                </div>
+
+                <div class="brief-intro" style="width: 700px;height: 200px;">
+                    <strong style="font-size: 25px;color: aqua;"> Phase 4: Refinement </strong>
+                    <ul style="width: 450px;line-height: 1.5;margin-left: -30px;">
+                        <li>Fine-tuned shadows, borders, and spacing</li>
+                        <li>Adjusted alignment for visual balance</li>
+                        <li>Iterated until it felt “just right”</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <div  class="section1" style="height: 500px;">
+                <div class="name">🌟 Future Enhancements</div>
+                <div class="brief-intro" style="height: 390px;width: 1050px;">
+                    <div class="card" style="width: 200px;height: 250px;margin-left: 5px;">
+                        <div style="color: aqua;font-size: 20px;text-align: center;">Multi-Gender & Age Detection 🧑‍⚧️</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/multi-gender.png);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Expands prediction to include non-binary genders and age estimation, making the model more inclusive and socially aware.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div style="color: aqua;font-size: 20px;text-align: center;">Real-Time Video Detection 🎥</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/real-time.png);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Enables live gender detection from video streams using frame-by-frame analysis for dynamic & robust real-time applications.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div style="color: aqua;font-size: 20px;text-align: center;">Emotion-Aware Gender Detection 😃</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/emotion-aware.webp);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Adds emotional context to gender prediction, enhancing personalization and user experience across interactive platforms.
+                        </div>
+                    </div>
+                    <div class="card" style="width: 200px;height: 250px;">
+                        <div style="color: aqua;font-size: 20px;text-align: center;">Mobile App Integration📱</div>
+                        <div style="width: 100px;height: 70px;background-image: url(/ImagesAndVideos/mobile-app-integration.png);background-repeat: no-repeat;background-size: cover;margin-left: 49px;margin-top: 10px;border: 1px solid aqua;border-radius: 10px;"></div>
+                        <div style="margin-top: 10px;font-size: 15px;color: #bbcdff;text-align: justify;">
+                            Deploys the model in a lightweight mobile app for fast, offline gender detection, making it accessible, portable, and user-friendly for everyday use.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="back-home">
+            <a href="/" style="text-decoration: none;color: aqua;">Back To Home Page</a>
+        </div>
+
+        <div class="footer">
+            <div style="width: 500px;height: 100px;border: 1px solid white;margin-left: 330px;margin-top:10px;border-radius: 10px;background-color: black;padding-top: 10px;padding-bottom: 10px;">
+                <div class="footer-title">My Contacts</div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/gmail.png" width="40" height="40" style="border-radius: 7px;">
+                    </div>
+                    <div class="footer-icon-info"><p>Gmail:</p>  <p>raza8bb805</p> <p>@gmail.com</p></div>
+                    <div class="footer-icon-name1">Gmail</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://github.com/QamarRaza92" target="_blank">
+                        <img src="/ImagesAndVideos/github2.png" width="40" height="40" style="border-radius: 7px;" title="Link to my Github">
+                        </a>
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">Github</div>
+                </div>
+                <div class="footer-body">
+                    <div class="footer-icon">
+                        <a href="https://www.linkedin.com/in/qamar-raza-090693280?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BCHxh9v%2FMQVWYDhzVKNF2wg%3D%3D" target="_blank"> 
+                             <img src="/ImagesAndVideos/linkedin.png" width="40" height="40" style="border-radius: 7px;" title="Link to my LinkedIn">
+                        </a>
+                       
+                    </div>
+                    <div style="color: rgba(0, 0, 0, 0);">gdrhjjbh</div>
+                    <div class="footer-icon-name2">LinkedIn</div>
+                </div>
+                <div class="footer-body">  
+                    <div class="footer-icon">
+                        <img src="/ImagesAndVideos/whatsapp.png" width="40" height="40" style="border-radius: 7px;" > 
+                    </div>
+                    <div class="footer-icon-info"><p>Whatsapp:</p> <p>+91 8319417300</p></div>
+                    <div class="footer-icon-name1">Whatsapp</div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Gender Detection Through Facial Images - Model By QAMAR RAZA.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
